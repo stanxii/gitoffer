@@ -1,0 +1,16 @@
+{
+  "name": "gitoffer",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "^4.12.2",
+    "handlebars": "^3.0.0",
+    "hogan-express": "^0.5.2",
+    "material-ui": "^0.7.1",
+    "redis": "^0.12.1",
+    "socket.io": "^1.3.5"
+  }
+}
