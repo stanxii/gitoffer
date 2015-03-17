@@ -4,7 +4,8 @@
  */
 var express = require('express')
   , routes = require('./routes')
-  , hogan = require('hogan-express')
+  , http = require('http')
+  , exphbs  = require('express-handlebars')
   , io = require('socket.io');
 
 var redis = require('redis').createClient();
@@ -13,16 +14,16 @@ var mes = require('./message');
 
 var app = express();
 app.set('views', __dirname + '/views');
-app.set('view engine', 'html');
-app.engine('html', hogan);
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 
 app.all('/', function(req, res){
-    res.render('index.html', { title: '首页' });
+    res.render('home');
 });
 
-var node = app.listen(3000);
+var node = http.createServer(app).listen(3000);
 var sio = io.listen(node);
 
 //监听后台消息通道

@@ -2,10 +2,203 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbd38f8-874e-44c3-9c50-792bfe91ff27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/lib/JSXTransformer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/lib/jquery-2.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/lib/react.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/home.handlebars" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/layouts/main.handlebars" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\MIT-LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\README.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\hogan-express.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\.bin\hulk" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\.bin\hulk.cmd" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\README.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\bin\hulk" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\1.0.0\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\1.0.0\hogan.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.0\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.0\hogan.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.3\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.3\hogan.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\hogan-1.0.4.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\template-1.0.4.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.4\template-1.0.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\hogan-1.0.5.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\template-1.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\1.0.5\template-1.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\hogan-2.0.0.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\template-2.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\builds\2.0.0\template-2.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\images\noise.png" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\images\small-hogan-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\images\stripes.png" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\index.html" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\stylesheets\layout.css" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\build\gh-pages\stylesheets\skeleton.css" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\component.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\hogan-3.0.2.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\template-3.0.2.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\dist\template-3.0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\inheritance.html" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\inheritance.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\lib\compiler.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\lib\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\lib\template.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\.bin\nopt" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\.bin\nopt.cmd" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\.gitignore.orig" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\.gitignore.rej" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\examples\pow.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\examples\pow.js.orig" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\examples\pow.js.rej" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\index.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\package.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\chmod.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\clobber.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\mkdirp.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\perm.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\perm_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\race.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\rel.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\sync.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\umask.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\mkdirp\test\umask_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\README.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\bin\nopt.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\examples\my-program.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\lib\nopt.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\README.md" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\abbrev.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\package.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\node_modules\abbrev\test.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\package.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\package.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\test.html" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\test.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\test.mustache" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.0\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.0\hogan.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.3\hogan.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.3\hogan.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\hogan-1.0.4.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\template-1.0.4.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.4\template-1.0.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\hogan-1.0.5.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\1.0.5\template-1.0.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\hogan-2.0.0.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\template-2.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\2.0.0\template-2.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan-3.0.0.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.0\hogan.template-3.0.0.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan-3.0.1.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.1\hogan.template-3.0.1.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.min.amd.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.min.common.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.min.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\hogan-3.0.2.mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\template-3.0.2.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\web\builds\3.0.2\template-3.0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\package.json" afterPath="" />
+      <change type="DELETED" beforePath="F:\projects\gitoffer\views\index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="F:\projects\gitoffer\node_modules\hogan-express\node_modules\hogan.js\node_modules\nopt\.npmignore" afterPath="$PROJECT_DIR$/views/home.handlebars" />
     </list>
     <ignored path="gitoffer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +225,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+            <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="266">
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
@@ -42,15 +235,15 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.133333" vertical-offset="0" max-vertical-offset="817">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="836">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.html">
+      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3609672" vertical-offset="0" max-vertical-offset="579">
               <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
@@ -59,10 +252,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/home.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="message.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
+            <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="741">
               <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding />
             </state>
@@ -72,8 +275,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="418">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="418">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -87,12 +290,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/message.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/views/layouts/main.handlebars" />
+        <option value="$PROJECT_DIR$/views/home.handlebars" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -128,6 +333,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,6 +363,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitoffer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitoffer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -208,7 +432,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,10 +454,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -242,10 +469,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -261,6 +484,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
@@ -280,19 +509,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19692533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -323,13 +552,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="266">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="817">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="741">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="418">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://F:/self_projects/Stuffer Manager System/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31986532" vertical-offset="0" max-vertical-offset="2508">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -337,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44781145" vertical-offset="0" max-vertical-offset="594">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -353,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.14007092" vertical-offset="5722" max-vertical-offset="18943">
           <caret line="297" column="28" selection-start-line="297" selection-start-column="23" selection-end-line="297" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,14 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
           <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="418">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -381,15 +629,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/views/home.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.133333" vertical-offset="0" max-vertical-offset="817">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="836">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="418">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3609672" vertical-offset="0" max-vertical-offset="579">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
