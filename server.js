@@ -18,10 +18,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
-
-app.all('/', function(req, res){
-    res.render('home');
-});
+app.get('/', routes.index);
 
 var node = http.createServer(app).listen(3000);
 var sio = io.listen(node);
