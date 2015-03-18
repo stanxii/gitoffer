@@ -4,13 +4,13 @@
  */
 var JSX = require('node-jsx').install(),
     React = require('react'),
-    CommentBox = require('../public/javascripts/components/componentbox');
+    IndexHeader = require('../public/javascripts/components/indexheader');
 
 
 exports.index = function(req, res){
     // Render React to a string, passing in our fetched tweets
     var markup = React.renderToString(
-        CommentBox()
+        IndexHeader()
     );
 
     // Render our 'home' template
