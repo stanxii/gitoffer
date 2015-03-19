@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "^4.12.2",
     "express-handlebars": "^1.2.2",
+    "grumble": "0.0.1",
     "handlebars": "^3.0.0",
     "material-ui": "^0.7.1",
     "node-jsx": "^0.12.4",
