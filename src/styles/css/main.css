@@ -1,0 +1,95 @@
+body {
+    font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-family: inherit;
+}
+.topbar {
+    padding: 0 0 15px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: inherit;
+}
+.container .logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    float: left;
+    padding-top: 20px;
+}
+.main-page-nav {
+    display: block;
+    float: left;
+    width: 84%;
+    max-width: 700px;
+    padding-left: 100px;
+}
+.main-page-nav li {
+    display: block;
+    float: left;
+    padding: 13px 1% 0;
+    font-size: 1.2em;
+    width: 19%;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+}
+.main-page-nav li a {
+    color: #204056;
+   /* text-shadow: 0 -1px 0 #809ba4; */
+}
+.main-page-nav li a:hover{
+    border-bottom: 2px solid #c51525 !important;
+    padding-bottom: 5px;
+    color: #23c897;
+}
+.green-btn {
+    color: #fff;
+    background: #1abc9c;
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 9px 20px;
+    float: right;
+
+}
+.main-content {
+    padding-top: 100px;
+    margin: 0 15px;
+    display: block;
+    width: 90%;
+    position: relative;
+}
+
+.register_main {
+    width: 70%;
+    padding: 3px;
+    background-color: #F1F2F4;
+}
+
+.register_content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.register_title {
+    text-align: center;
+}
+
+.register_tab {
+   width: 50%;
+}
