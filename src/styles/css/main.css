@@ -19,7 +19,7 @@ a {
 }
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     height: inherit;
 }
@@ -33,15 +33,16 @@ a {
 .main-page-nav {
     display: block;
     float: left;
-    width: 84%;
-    max-width: 700px;
-    padding-left: 100px;
+    width: 90%;
+    max-width: 900px;
+    padding-left: 90px;
+    padding-top: 18px;
 }
 .main-page-nav li {
     display: block;
     float: left;
     padding: 13px 1% 0;
-    font-size: 1.2em;
+    font-size: 1.7em;
     width: 19%;
     text-align: center;
     -moz-box-sizing: border-box;
@@ -61,11 +62,33 @@ a {
 .green-btn {
     color: #fff;
     background: #1abc9c;
-    font-size: 17px;
-    border-radius: 20px;
-    padding: 9px 20px;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px 15px;
     float: right;
-
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
+}
+.orange-btn {
+    color: #fff;
+    background: #f9604c;
+    font-size: 19px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    float: right;
+    margin-top: 10px;
+    transition: border 0.25s linear 0s, color 0.25s linear 0s, background-color 0.25s linear 0s;
+}
+.green-btn:hover {
+    color: #fff;
+    background-color: #48c9b0;
+    border-color: #48c9b0;
+}
+.orange-btn:hover {
+    color: #fff;
+    background-color: #f7341b;
+    border-color: #f7341b;
 }
 .main-content {
     padding-top: 100px;

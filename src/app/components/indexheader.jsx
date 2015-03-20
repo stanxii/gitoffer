@@ -18,8 +18,8 @@ module.exports = IndexHeader = React.createClass({
                         <li className="nav-recommend">
                             <a href="">推荐高手</a>
                         </li>
-                        <a href="/login" className="green-btn">登录</a>
                         <a href="/signup" className="orange-btn">注册</a>
+                        <a href="/login" className="green-btn">登录</a>
                     </ul>
                 </div>
             </div>
