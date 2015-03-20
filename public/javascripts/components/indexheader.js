@@ -15,7 +15,7 @@ module.exports = IndexHeader = React.createClass({
                         <li className="nav-link">
                             <a href="">如何使用</a>
                         </li>
-                        <li className="nav-link">
+                        <li className="nav-recommend">
                             <a href="">推荐高手</a>
                         </li>
                     </ul>
