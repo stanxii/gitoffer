@@ -6,7 +6,8 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , exphbs  = require('express-handlebars')
-  , io = require('socket.io');
+  , io = require('socket.io')
+  , injectTapEventPlugin = require("react-tap-event-plugin");
 
 var redis = require('redis').createClient();
 var publish = require('redis').createClient();
@@ -18,7 +19,9 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
+injectTapEventPlugin();
 app.get('/', routes.index);
+app.get('/register', routes.register);
 
 var node = http.createServer(app).listen(3000);
 var sio = io.listen(node);
