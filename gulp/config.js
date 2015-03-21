@@ -1,4 +1,4 @@
-var dest = './build',
+var dest = './public/build',
   src = './src',
   mui = './node_modules/material-ui/src';
 
@@ -19,7 +19,19 @@ module.exports = {
       src + '/styles/less/**',
       mui + '/styles/less/**'
     ],
-    dest: dest
+    dest: dest + '/stylesheets'
+  },
+  image: {
+    src: src + '/images/**',
+    dest: dest + '/images'
+  },
+  css: {
+    src: src + '/styles/css/**',
+    dest: dest + '/stylesheets'
+  },
+  javascripts: {
+    src: src + '/js/**',
+    dest: dest + '/javascripts'
   },
   markup: {
     src: src + "/views/**",
@@ -32,7 +44,7 @@ module.exports = {
     // bundle config in the list below
     bundleConfigs: [{
       entries: src + '/app/app.jsx',
-      dest: dest,
+      dest: dest + '/javascripts',
       outputName: 'app.js'
     }]
   }

@@ -6,7 +6,7 @@ module.exports = IndexHeader = React.createClass({
             <div className="topbar">
                 <div className="container">
                     <a href="/">
-                        <img alt="GitOffer" className="logo" src="../../images/GitOffer.png" />
+                        <img alt="GitOffer" className="logo" src="/images/GitOffer.png" />
                     </a>
                     <ul className="main-page-nav">
                         <li className="nav-link">

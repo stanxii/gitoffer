@@ -12,8 +12,9 @@ var publish = require('redis').createClient();
 var mes = require('./message');
 
 var app = express();
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'html');
+app.set('views', __dirname + '/public/build');
+app.use(express.static(__dirname + '/public/build'));
 app.use(express.static(__dirname + '/node_modules'));
 
 injectTapEventPlugin();
