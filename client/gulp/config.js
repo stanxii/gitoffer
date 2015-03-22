@@ -10,19 +10,31 @@ module.exports = {
       baseDir: [dest, src]
     },
     files: [
-      dest + '/**'
+      dest + '/**', dest +'/javascripts',dest +'/images',dest +'/stylesheets'
     ]
   },
   less: {
-    src: src + '/less/main.less',
+    src: src + '/styles/less/material-ui.less',
     watch: [
-      src + '/less/**',
-      mui + '/less/**'
+      src + '/styles/less/**',
+      mui + '/styles/less/**'
     ],
     dest: dest + '/stylesheets'
   },
+  image: {
+    src: src + '/images/**',
+    dest: dest + '/images'
+  },
+  css: {
+    src: src + '/styles/css/**',
+    dest: dest + '/stylesheets'
+  },
+  javascripts: {
+    src: src + '/javascripts/**',
+    dest: dest + '/javascripts'
+  },
   markup: {
-    src: src + "/www/**",
+    src: src + "/views/**",
     dest: dest
   },
   browserify: {
