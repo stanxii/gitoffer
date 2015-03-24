@@ -10,9 +10,12 @@ var app = express();
 
 // assign the swig engine to .html files
 
-// set .html as the default extension
+//// set .html as the default extension
 app.set('view engine', 'html');
 app.set('views', __dirname + '/public');
+
+
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

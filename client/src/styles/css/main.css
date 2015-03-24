@@ -21,7 +21,7 @@ a {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    height: inherit;
+    height:58px;
 }
 .container .logo {
     width: 200px;
@@ -37,6 +37,7 @@ a {
     max-width: 900px;
     padding-left: 90px;
     padding-top: 18px;
+    z-index: 1000;
 }
 .main-page-nav li {
     display: block;
@@ -91,11 +92,17 @@ a {
     border-color: #f7341b;
 }
 .main-content {
-    padding-top: 100px;
+    padding-top: 20px;
     margin: 0 15px;
     display: block;
     width: 90%;
     position: relative;
+}
+
+.main-content:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .register_main {
