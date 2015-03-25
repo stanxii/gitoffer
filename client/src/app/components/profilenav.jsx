@@ -1,20 +1,23 @@
-var React = require('react');
-var Router = require('react-router');
-var RouteHandler = Router;
-module.exports = IndexHeader = React.createClass({
+var React = require('react'),
+    mui = require('material-ui');
+
+module.exports = ProfileNavigation = React.createClass({
     render: function() {
         return (
             <div className="topbar">
-                <div className="container">
+                <div className="pro-container">
                     <a>
                         <img alt="GitOffer" className="logo" src="/images/GitOffer.png" />
                     </a>
                     <ul className="main-page-nav">
                         <li className="nav-link">
-                            <a href="">我要招人</a>
+                            <a href="">预览简历</a>
                         </li>
                         <li className="nav-link">
-                            <a href="">如何使用</a>
+                            <a href="">修改简历</a>
+                        </li>
+                        <li>
+                            <a>如何使用</a>
                         </li>
                         <li className="nav-recommend">
                             <a href="">推荐高手</a>
@@ -23,10 +26,7 @@ module.exports = IndexHeader = React.createClass({
                         <a href="/login" className="green-btn">登录</a>
                     </ul>
                 </div>
-                <div className="main-content">
-                    <RouteHandler />
-                </div>
             </div>
-        );
+        )
     }
 });

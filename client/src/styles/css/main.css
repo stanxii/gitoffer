@@ -123,3 +123,11 @@ a {
 .register_tab {
    width: 50%;
 }
+
+/*   css for profile edit */
+.pro-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
