@@ -3,6 +3,9 @@ var Router = require('react-router');
 var IndexHeader = require('./indexheader.js');
 var RegisterTable = require('./register.js');
 var ProfileHeader = require('./profilenav.js');
+var Welcome = require('./welcome.js');
+var Require = require('./require.js');
+
 
 var {
     Route,
@@ -48,6 +51,10 @@ var ProfileEdit = React.createClass ({
         return (
             <div>
                 <ProfileHeader />
+                <div className="edit-container">
+                    <Welcome />
+                    <Require />
+                </div>
             </div>
         )
     }

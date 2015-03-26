@@ -14,7 +14,7 @@ module.exports = ProfileNavigation = React.createClass({
                         </a>
                         <ul className="main-page-nav">
                             <li className="nav-link">
-                                <a href="">预览简历</a>
+                                <a href="">个人简历</a>
                             </li>
                             <li className="nav-link">
                                 <a href="">修改简历</a>
