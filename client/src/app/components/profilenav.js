@@ -26,8 +26,16 @@ module.exports = ProfileNavigation = React.createClass({
                                 <a href="">推荐高手</a>
                             </li>
                         </ul>
-                        <div className="setbtn">
-                            <IconButton tooltip="设置" touch={true} iconClassName="muidocs-icon-action-stars mui-font-icon"/>
+                        <div className="setting">
+                            <div className="setbtn">
+                                <IconButton tooltip="设置" touch={true} iconClassName="muidocs-icon-action-stars mui-font-icon"/>
+                            </div>
+                            <div className="set-nav hide">
+                                <ul>
+                                    <li><a href="#"><span>设置</span></a></li>
+                                    <li><a href="#"><span>登出</span></a></li>
+                                </ul>
+                             </div>
                         </div>
                     </div>
                 </div>

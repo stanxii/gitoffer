@@ -28,5 +28,14 @@ $(function(){
             $('.welcome').hide();
             $('.require').addClass("margin-top:85px");
         }
-    )
+    );
+    $('.setbtn').click(function(e) {
+        e.stopPropagation();
+        $('.set-nav').removeClass('hide');
+    });
+    $(document).click(function() {
+        if(!$('.set-nav').hasClass("hide")) {
+            $('.set-nav').addClass("hide");
+        }
+    });
 });
