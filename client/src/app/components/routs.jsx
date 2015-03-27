@@ -2,6 +2,10 @@ var React = require('react');
 var Router = require('react-router');
 var IndexHeader = require('./indexheader.js');
 var RegisterTable = require('./register.js');
+var ProfileHeader = require('./profilenav.js');
+var Welcome = require('./welcome.js');
+var Require = require('./require.js');
+
 
 var {
     Route,
@@ -42,9 +46,25 @@ var Register = React.createClass({
     }
 });
 
+var ProfileEdit = React.createClass ({
+    render: function () {
+        return (
+            <div>
+                <ProfileHeader />
+                <div className="edit-container">
+                    <Welcome />
+                    <Require />
+                </div>
+            </div>
+        )
+    }
+});
+
 var NotFound = React.createClass({
     render: function () {
-        return <h2>Not found</h2>;
+        return  (
+            <h2>Not found</h2>
+        )
     }
 });
 
@@ -53,6 +73,7 @@ module.exports = routes = (
         <DefaultRoute handler={Index} />
         <Route name="signup" path="register" handler={Register} />
         <Route name="index" path="index" handler={Index}/>
+        <Route name="editprofile" path="profile/edit" handler={ProfileEdit} />
         <NotFoundRoute handler={NotFound}/>
     </Route>
 );

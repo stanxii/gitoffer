@@ -22,5 +22,11 @@ $(function(){
                 hideAfter: 1000
             }
         );
-    })
+    });
+    $('.right-info').click (
+        function() {
+            $('.welcome').hide();
+            $('.require').addClass("margin-top:85px");
+        }
+    )
 });
