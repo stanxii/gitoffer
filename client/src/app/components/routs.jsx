@@ -5,7 +5,8 @@ var RegisterTable = require('./register.js');
 var ProfileHeader = require('./profilenav.js');
 var Welcome = require('./welcome.js');
 var Require = require('./require.js');
-
+var LeftNavigation = require('./leftnav.js');
+var RightProfile = require('./rightprofile.js');
 
 var {
     Route,
@@ -54,6 +55,10 @@ var ProfileEdit = React.createClass ({
                 <div className="edit-container">
                     <Welcome />
                     <Require />
+                    <div className="profile-edit-main-container">
+                        <LeftNavigation />
+                        <RightProfile />
+                    </div>
                 </div>
             </div>
         )
