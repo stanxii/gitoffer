@@ -4,7 +4,7 @@
         Routes = require('./components/routs.jsx');
     var Router = require('react-router');
     //Needed for React Developer Tools
-    window.React = React;
+    //window.React = React;
 
     //Needed for onTouchTap
     //Can go away when react 1.0 release
