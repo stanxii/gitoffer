@@ -356,6 +356,37 @@ a {
 .button-arrow:hover {
     background-color: #4cccae
 }
+.content {
+    background: #f7f6f3;
+    padding: 30px 0;
+    margin-left: 70px;
+}
+.control-label {
+    font-size: 20px;
+    color: #515348;
+    padding-left: 80px
+}
+.num-input {
+    margin-left: 30px;
+    display: inline-block;
+    height: 50px;
+    width: 400px;
+    padding-left: 10px;
+    font-size: 18px;
+    border: 1px solid #dddddd;
+}
+.num-input input {
+    height: 50px;
+    width: 400px;
+    padding-left: 10px;
+    font-size: 18px;
+    border: 1px solid #dddddd;
+}
+.input-btn {
+    display: inline-block;
+    margin-left: -148px;
+    margin-top: 7px;
+}
 
 .tab-template-container p {
     text-align: center;

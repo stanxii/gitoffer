@@ -1,5 +1,6 @@
 var React = require('react');
 var mui = require('material-ui');
+var RaisedButton = mui.RaisedButton;
 
 module.exports = RightProfile = React.createClass({
     render: function() {
@@ -20,10 +21,15 @@ var MessageVaild = React.createClass({
                 </div>
                 <div className="content">
                     <div className="">
-                        <label>手机</label>
+                        <label className="control-label">手机</label>
+                        <input className="num-input" />
+                        <div className="input-btn">
+                            <RaisedButton label="免费发送验证短信" primary />
+                        </div>
                     </div>
                 </div>
             </div>
         )
     }
 });
+
