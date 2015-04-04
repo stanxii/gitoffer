@@ -387,6 +387,15 @@ a {
     margin-left: -148px;
     margin-top: 7px;
 }
+.icon-info {
+    height: 40px;
+    width: 40px;
+    margin-left: 140px;
+}
+.tip {
+    display: inline-flex;
+    align-items: center;
+}
 
 .tab-template-container p {
     text-align: center;
