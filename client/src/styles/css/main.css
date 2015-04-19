@@ -508,7 +508,36 @@ a {
     font-size: 18px;
     padding: 13px;
 }
-
+.mechat-pcbin {
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    bottom: 20px;
+    right: 50px;
+    position: fixed;
+    background: #28C4F7;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+}
+.mechat-pcbin>span {
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    color: #fff;
+    margin-left: 16px;
+    margin-top: 16px;
+    background: url(../../images/mechat.png) no-repeat;
+    background-size: cover;
+    text-indent: -200px;
+    overflow: hidden;
+}
+.mechat-pcbin:hover >span {
+    background: none repeat scroll 0 0 rgba(0,0,0,0);
+    height: auto;
+    margin-top: 9px;
+    text-indent: 0;
+}
 
 .tab-template-container p {
     text-align: center;
