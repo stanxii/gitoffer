@@ -781,9 +781,11 @@ a {
     -ms-user-select: none;
     user-select: none;
 }
-
 .register_submit input:hover {
     color: black;
+}
+.messagebtn {
+    width: 170px;
 }
 
 @font-face {
