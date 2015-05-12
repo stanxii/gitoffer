@@ -4,7 +4,7 @@ var RaisedButton = mui.RaisedButton;
 
 module.exports = MessageVaild = React.createClass({
     MobileValid: function() {
-        var mobile = $('.num-input').val().trim();
+        var mobile = $('.input-btn').val().trim();
         var validReg = /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/;
         if(validReg.test(mobile))
             alert('格式正确');
@@ -20,7 +20,7 @@ module.exports = MessageVaild = React.createClass({
                 <div className="content">
                     <div className="">
                         <label className="control-label">手机</label>
-                        <input className="num-input" type="number" />
+                        <input className="num-input" type="number" ref="numInput"/>
                         <div className="input-btn" onClick={this.MobileValid}>
                             <RaisedButton label="免费发送验证短信" primary />
                         </div>
