@@ -2,15 +2,28 @@ var React = require('react');
 var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
 
+module.exports = ReSendButton = React.createClass({
+    render: function() {
+        return (
+          <RaisedButton label="60 秒后重新获取" primary />
+        );
+    }
+});
 module.exports = MessageVaild = React.createClass({
     MobileValid: function() {
         var mobile = $('.input-btn').val().trim();
         var validReg = /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/;
         if(validReg.test(mobile))
-            alert('格式正确');
+        {
+            React.render(
+                <ReSendButton />,
+                document.getElementById('MessageSend')
+            );
+        }
         else
             alert('格式不正确');
     },
+
     render: function() {
         return (
             <div className="profile-block msg-valid" id="valid">
@@ -22,7 +35,9 @@ module.exports = MessageVaild = React.createClass({
                         <label className="control-label">手机</label>
                         <input className="num-input" type="number" ref="numInput"/>
                         <div className="input-btn" onClick={this.MobileValid}>
-                            <RaisedButton label="免费发送验证短信" primary />
+                            <div id="MessageSend">
+                                <RaisedButton label="免费发送验证短信" primary />
+                            </div>
                         </div>
                     </div>
                     <div className="tip">
@@ -31,6 +46,6 @@ module.exports = MessageVaild = React.createClass({
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 });
