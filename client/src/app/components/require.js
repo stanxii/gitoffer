@@ -11,11 +11,11 @@ module.exports = Require = React.createClass({
                     <div className="require-info">
                         <a href="">短信验证</a>
                         <span className="separator">|</span>
-                        <a href="">个人信息</a>
+                        <a href="#/profile/edit#personinfo">个人信息</a>
                         <span className="separator">|</span>
                         <a href="">期望工作</a>
                         <span className="separator">|</span>
-                        <a href="">教育经历</a>
+                        <a href="#/profile/edit#education">教育经历</a>
                         <span className="separator">|</span>
                         <a href="">工作经历</a>
                         <span className="separator">|</span>

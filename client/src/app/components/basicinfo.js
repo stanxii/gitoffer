@@ -6,9 +6,9 @@ module.exports = BasicInfo = React.createClass({
     render: function () {
         return (
             <div className="profile-block basicinfo" id="basicinfo">
-                <div className="title">
+                <a className="title" name="personinfo">
                     <h3>基本信息</h3>
-                </div>
+                </a>
                 <div className="context">
                     <div className="upload-pic">
                         <div className="image-block">

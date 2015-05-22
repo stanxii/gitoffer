@@ -32,7 +32,7 @@ var Index = React.createClass({
             <div>
                 <IndexHeader />
             </div>
-        )
+        );
     }
 });
 
@@ -43,7 +43,7 @@ var Register = React.createClass({
                 <IndexHeader />
                 <RegisterTable />
             </div>
-        )
+        );
     }
 });
 
@@ -69,16 +69,17 @@ var NotFound = React.createClass({
     render: function () {
         return  (
             <h2>Not found</h2>
-        )
+        );
     }
 });
 
+
 module.exports = routes = (
-    <Route handler={app}>
+    <Route path="/" handler={app}>
         <DefaultRoute handler={Index} />
         <Route name="signup" path="register" handler={Register} />
         <Route name="index" path="index" handler={Index}/>
-        <Route name="editprofile" path="profile/edit" handler={ProfileEdit} />
+        <Route name="profile/edit" path="profile/edit" handler={ProfileEdit} />
         <NotFoundRoute handler={NotFound}/>
     </Route>
 );

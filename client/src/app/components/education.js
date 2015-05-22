@@ -5,9 +5,9 @@ var RaisedButton = mui.RaisedButton;
 module.exports = Education = React.createClass({
     render: function() {
         return (
-            <div className="profile-block eduction-history" id="education">
+            <div className="profile-block eduction-history">
                 <div className="title">
-                    <h3>教育经历</h3>
+                    <h3><a name="education">教育经历</a></h3>
                 </div>
                 <div className="content">
                     <div className="profile-edit-input">
