@@ -19,7 +19,7 @@ module.exports = LeftNavigation = React.createClass({
                             <div className="circle"></div>
                         期望工作
                         </div>
-                        <a href="#/profile/edit/education" className="side-li">
+                        <a href="#/profile/edit/#education" className="side-li">
                             <div className="circle"></div>
                         教育经历
                         </a>

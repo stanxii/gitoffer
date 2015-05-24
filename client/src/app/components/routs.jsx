@@ -54,7 +54,6 @@ var ProfileEdit = React.createClass ({
                 <ProfileHeader />
                 <div className="edit-container">
                     <Welcome />
-                    <Require />
                     <div className="profile-edit-main-container">
                         <LeftNavigation />
                         <RightProfile />

@@ -31,7 +31,7 @@ module.exports = MessageVaild = React.createClass({
                 <div className="content">
                     <div className="">
                         <label className="control-label">手机</label>
-                        <input className="num-input" type="number" ref="numInput"/>
+                        <input className="num-input" type="tel" ref="numInput"/>
                         <div className="input-btn" onClick={this.MobileValid}>
                             <div id="MessageSend">
                                 <RaisedButton className="messagebtn" label={labels} primary />

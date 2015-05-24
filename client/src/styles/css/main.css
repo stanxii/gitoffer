@@ -155,6 +155,14 @@ a {
 .edit-container {
     padding-top: 80px;
 }
+.welcome-background {
+    background-color: #edf4ed;
+    border-bottom: 1px solid #e5ebe4;
+    height: 76px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 .welcome {
     display: flex;
     flex-flow: row nowrap;
@@ -164,6 +172,8 @@ a {
     margin: 0 auto;
     height: 76px;
     position: fixed;
+    left: 0;
+    right: 0;
 }
 .profile-edit-main-container {
     width: 1300px;
@@ -173,7 +183,7 @@ a {
     justify-content: flex-start;
     display: flex;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 76px;
 }
 .left-info {
     float: left;
@@ -194,7 +204,7 @@ a {
 }
 .right-info {
     float: right;
-
+    align-self: center;
 }
 .right-info img {
     width: 40px;
@@ -305,6 +315,7 @@ a {
     width: 230px;
     height: 540px;
     margin-left: 20px;
+    position: fixed;
 }
 .side-nav {
     display: flex;
@@ -324,6 +335,7 @@ a {
 .right-side {
     border-left: 1px solid #ddd;
     width: 960px;
+    margin-left: 250px;
 }
 .title {
     margin-bottom: 40px;
@@ -789,9 +801,6 @@ a {
 }
 .register_submit input:hover {
     color: black;
-}
-.messagebtn {
-    width: 170px;
 }
 
 @font-face {
