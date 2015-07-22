@@ -32,6 +32,8 @@ app.get('/', function (req, res, next) {
     crawlerDetail.crawlerDetail();
     crawlerDAO.crawlerIndex(topUrl);
 
+
+
     // async.series([
     //   function(cb) {
     //     //step 1

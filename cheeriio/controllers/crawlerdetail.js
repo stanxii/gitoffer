@@ -28,13 +28,15 @@ CrawlerDetail.prototype.crawlerDetail = function() {
 
                         //crawler list now
                         var $ = cheerio.load(sres.text);
-                        var job = {};
+                        var job = {
+                          category:[]
+                        };
                         job.detail_link = res.url;
-                        job.title = $('.pos-head.head-block h1').text();
-                        job.city = $('.pos-head.head-block h2').text();
-                        job.conuntry = "india";
-                        job.company = $('.pos-head.head-block h3').text();
-                        job.description = $('.pos-desc.content-block.description p').text();
+                        job.title = $('.pos-head.head-block h1').text().replace('/\n/g',"").trim();
+                        job.city = $('.pos-head.head-block h2').text().replace('/\n/g',"").trim();
+                        job.country = "india";
+                        job.company = $('.pos-head.head-block h3').text().replace('/\n/g',"").trim();
+                        job.description = $('.pos-desc.content-block.description p').text().trim();
 
                         //判断元素存在
                         var requirements = $('.pos-req.content-block.required');
@@ -42,29 +44,30 @@ CrawlerDetail.prototype.crawlerDetail = function() {
                             job.requirements = requirements.find('p').text();
                         }
                         var companydesc = $('.pos-company.content-block');
-                        companydesc.find('p').text() + companydesc.find('span.morecontent').text();
+                        companydesc.find('p').text().trim() + companydesc.find('span.morecontent').text().trim();
 
-                        var additional = $('.pos-detail.content-block.clear-both dl.pll-left');
+                        var additional = $('.pos-detail.content-block.clear-both');
 
-                        if(additional.find('dd.date').length > 0) job.last_update = additional.find('dd.date').text();
-                        if(additional.find('dd.temp').length > 1) job.job_type = additional.find('dd.temp').get(0).text();
-                        if(additional.find('dd.temp').length > 1) job.position_type = additional.find('dd.temp').get(1).text();
-                        if(additional.find('dd.vacancies').length > 0) job.vacancies = additional.find('dd.vacancies').text();
-                        if(additional.find('dd.experience').length > 0) job.min_experience = additional.find('dd.experience').text();
-                        if(additional.find('dd.education').length > 0) job.education = additional.find('dd.education').text();
-                        if(additional.find('dt:contains(Salary)').length > 0) job.salary_range = additional.find('dt:contains(Salary)').next('dd').text();
-                        if(additional.find('dt:contains(Bonus)').length > 0) job.bonus = additional.find('dt:contains(Bonus)').next('dd').text();
-                        if(additional.find('dt:contains(Category)').length > 0) job.category = additional.find('dt:contains(Category)').next('dd').text();
+                        if(additional.find('dl.pull-left dd.date').length > 0) job.last_update = additional.find('dd.date').text().trim();
+                        if(additional.find('dl.pull-left dd.temp').length ==2) job.job_type = additional.find('dl.pull-left dd.temp').eq(0).text();
+                        if(additional.find('dl.pull-left dd.temp').length ==2) job.position_type = additional.find('dl.pull-left dd.temp').eq(1).text();
+                        if(additional.find('dd.vacancies').length > 0) job.vacancies = additional.find('dd.vacancies').text().trim();
+                        if(additional.find('dd.experience').length > 0) job.min_experience = additional.find('dd.experience').text().trim();
+                        if(additional.find('dd.education').length > 0) job.education = additional.find('dd.education').text().trim();
+                        if(additional.find('dt:contains(Salary)').length > 0) job.salary_range = additional.find('dt:contains(Salary)').next('dd').text().trim();
+                        if(additional.find('dt:contains(Bonus)').length > 0) job.bonus = additional.find('dt:contains(Bonus)').next('dd').text().trim();
+                        if(additional.find('dt:contains(Category)').length > 0) job.category.push(additional.find('dt:contains(Category)').next('dd').text().replace('/\n/g',"").trim());
                         console.log(JSON.stringify(job));
                         var jobEntity = new Job(job);
                         jobEntity.save();
 
                         //set status = 0 flag for had crawlered
-                        res.update({needcrawler : "1"}, function(err, seed){
+                        res.update({needcrawler : "0"}, function(err, seed){
                            if (err) return console.error(err);
                            console.log('update need crawlered flag ok');
+                           _this.crawlerDetail();
                         });
-                        _this.crawlerDetail();
+
                 });
            }
 

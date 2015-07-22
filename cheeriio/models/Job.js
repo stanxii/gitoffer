@@ -22,6 +22,8 @@ var jobSchema = new mongoose.Schema({
     create_date : {type: Date, default: Date.now},
     last_update : String,
     description : String,
+    requirements: String,
+    companydesc:  String,
     detail_link : String,
     from_link : String,
     country : String,
