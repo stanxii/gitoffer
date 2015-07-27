@@ -27,7 +27,9 @@ CrawlerDetail.prototype.crawlerDetail = function() {
               superagent.get(joburl.url)
                     .end(function (err, sres) {
                         // 常规的错误处理
-                        if (err) {console.log(err); return err;}
+                        if (err) {
+                          console.log(err); _this.crawlerDetail();
+                        }
 
                         //crawler list now
                         var $ = cheerio.load(sres.text);
