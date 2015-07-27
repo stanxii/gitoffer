@@ -8,13 +8,8 @@ var iconv = require('iconv-lite');
 var crawlerDAO = require('./controllers/crawler');
 var crawlerDetail = require('./controllers/crawlerdetail');
 var jobDAO = require('./controllers/job');
+var elasticDAO = require('./controllers/elastic')
 
-//elastic search engine
-// var elasticsearch = require('elasticsearch');
-// var esclient = new elasticsearch.Client({
-//   host: '192.168.31.171:9200',
-//   log: 'trace'
-// });
 
 //mongodb
 mongoose.connect('mongodb://192.168.31.171/greatejob');
@@ -28,7 +23,7 @@ app.get('/', function (req, res, next) {
     //var topUrl =  'http://www.indeed.com/rc/clk?jk=c796cb53fa83670c';
     var topUrl = 'http://www.careesma.in/sitemap';
 
-
+    
     crawlerDetail.crawlerDetail();
     crawlerDAO.crawlerIndex(topUrl);
 

@@ -17,7 +17,7 @@ JobDAO.prototype.createUrlId = function(url) {
             console.log("find no result in mongodb");
             return -1;
         }else{
-            
+
         }
     });
 

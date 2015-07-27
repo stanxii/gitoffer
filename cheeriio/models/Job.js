@@ -2,32 +2,31 @@
 var mongoose = require('mongoose');
 
 var jobSchema = new mongoose.Schema({
+    indexid: Number,
     title: String,
+    skills: String,
     company : String,
-    locality: String,
     city : String,
+    state : String,
+    zipcode: Number,
     job_type : String,
     position_type: String,
-    vacancies: String,
+    vacancies:Number,
     min_experience: String,
     education: String,
-    salary_range : String,
+    salary_min : Number,
+    salary_max : Number,
     bonus: String,
-    category : [String],
-    rate : {
-         star : String,
-         rate_img : String
-    },
-    publish : Date,
+    category : String,
+    rank : Number,
     create_date : {type: Date, default: Date.now},
-    last_update : String,
+    last_update : {type: Date},
     description : String,
     requirements: String,
     companydesc:  String,
     detail_link : String,
     from_link : String,
-    country : String,
-    State : String
+    country : String
 });
 
 module.exports = mongoose.model('Job', jobSchema);
