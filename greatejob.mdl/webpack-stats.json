@@ -1,6 +1,6 @@
 {
   "javascript": {
-    "main": "http://192.168.31.209:3001/dist/main-24ba6658e0743789f262.js"
+    "main": "http://192.168.31.209:3001/dist/main-4a6b0c337b8d4043f1db.js"
   },
   "styles": {},
   "images": {
@@ -12,11 +12,7 @@
       "infoBar": "infoBar___17D6S",
       "time": "time___3d2TC"
     },
-    "./src/views/App.scss": {
-      "app": "app___36DyQ",
-      "brand": "brand___34U-S",
-      "appContent": "appContent___1BHKV"
-    },
+    "./src/views/App.scss": {},
     "./src/views/Home.scss": {
       "home": "home___1yzpT",
       "masthead": "masthead___3MWiR",
