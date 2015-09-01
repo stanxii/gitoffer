@@ -28,10 +28,17 @@ export default class Html extends Component {
           {DocumentMeta.rewind({asReact: true})}
 
           <link rel="shortcut icon" href="/favicon.ico" />
+          /*
           <link href={cdn + 'twitter-bootstrap/3.3.5/css/bootstrap.css'}
                 media="screen, projection" rel="stylesheet" type="text/css" />
           <link href={cdn + 'font-awesome/4.3.0/css/font-awesome.min.css'}
                 media="screen, projection" rel="stylesheet" type="text/css" />
+          */
+          /* Page styles */
+          <link href="http://fonts.useso.com?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet" />
+          <link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet" />
+  	      <link rel="stylesheet" href="/react-mdl/material.min.css" />
+          <link rel="stylesheet" href="/styles.css" />
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
@@ -43,6 +50,7 @@ export default class Html extends Component {
           <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
+          <script src='/react-mdl/material.min.js' />
         </body>
       </html>
     );
