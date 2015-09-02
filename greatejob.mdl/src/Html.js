@@ -29,10 +29,10 @@ export default class Html extends Component {
 
           <link rel="shortcut icon" href="/favicon.ico" />
 
-          {/* Page styles */} 
+          {/* Page styles */}
           <link href="http://fonts.useso.com?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet" />
           <link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet" />
-  	      <link rel="stylesheet" href="/react-mdl/material.min.css" />
+  	      <link rel="stylesheet" href="/mdl-1.0.4/material.min.css" />
           <link rel="stylesheet" href="/css/main.css" />
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
@@ -45,7 +45,7 @@ export default class Html extends Component {
           <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}} />
           <script src={assets.javascript.main}/>
-          <script src='/react-mdl/material.min.js' />
+          <script src='/mdl-1.0.4/material.min.js' />
         </body>
       </html>
     );
