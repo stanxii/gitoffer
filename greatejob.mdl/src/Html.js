@@ -33,7 +33,7 @@ export default class Html extends Component {
           <link href="http://fonts.useso.com?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet" />
           <link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet" />
   	      <link rel="stylesheet" href="/mdl-1.0.4/material.min.css" />
-          <link rel="stylesheet" href="/css/main.css" />
+          <link rel="stylesheet" href="/styles.css" />
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>

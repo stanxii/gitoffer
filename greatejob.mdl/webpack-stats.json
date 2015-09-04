@@ -1,6 +1,6 @@
 {
   "javascript": {
-    "main": "http://192.168.31.209:3001/dist/main-55f73b5c8ff6b0026e59.js"
+    "main": "http://192.168.31.209:3001/dist/main-57a50a6c27dce29c4c48.js"
   },
   "styles": {},
   "images": {
@@ -34,17 +34,15 @@
     "./src/views/Login.scss": {
       "loginPage": "loginPage___RM2-l"
     },
-    "./src/components/Job.scss": {
-      "job": "job___mBHJf",
-      "company": "company____to2v",
-      "time": "time___2mDi1",
-      "rating": "rating___TXMZv",
-      "ratings": "ratings___3KnDc",
-      "effect02": "effect02___1iv50"
+    "./src/components/SearchBar.scss": {
+      "searchBar": "searchBar___2j_Iw",
+      "whatFont": "whatFont___31YZX",
+      "what": "what___15QjC",
+      "where": "where___1mUKF"
     },
-    "./src/views/FindJobs.scss": {
-      "jobs": "jobs___8qYhx",
-      "refreshBtn": "refreshBtn___2DTR_"
-    }
+    "./src/components/Job.scss": {
+      "job": "job___mBHJf"
+    },
+    "./src/views/FindJobs.scss": {}
   }
 }

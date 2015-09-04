@@ -49,20 +49,6 @@ class FindJobs extends Component {
       <div >
         <SearchBar  change={::this.handleChange} search={::this.handleSearch}/>
         <Jobs jobs = {jobs} />
-
-        <div className="greatejob-font greatejob-slogan">
-          dd
-        </div>
-        <div className="greatejob-font greatejob-sub-slogan">
-         dd
-        </div>
-
-        <div className="greatejob-font greatejob-create-character">
-          <a href=""><img src="images/andy.png" /> create your greatejob character</a>
-        </div>
-
-
-
       </div>
     )
   }

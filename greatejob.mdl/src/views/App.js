@@ -100,8 +100,8 @@ export default class App extends Component {
             {/* <!-- Navigation --> */}
             <div className="greatejob-navigation-container">
             <nav className="greatejob-navigation mdl-navigation">
-              <a className="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
-              <a className="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
+              <a className="mdl-navigation__link mdl-typography--text-uppercase" href="/findjobs">Find jobs</a>
+              <a className="mdl-navigation__link mdl-typography--text-uppercase" href="/">Home</a>
               <a className="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
               <a className="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
               <a className="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
@@ -158,12 +158,12 @@ export default class App extends Component {
           <div className="greatejob-content mdl-layout__content">
           <a name="top"></a>
           <div className="greatejob-be-together-section mdl-typography--text-center">
-            <div className="greatejob-font greatejob-slogan">be together. not the same.</div>
-            <div className="greatejob-font greatejob-sub-slogan">welcome to greatejob... be yourself. do your thing. see what's going on.</div>
-            <div className="greatejob-font greatejob-create-character">
-            <a href=""><img src="images/andy.png" /> create your greatejob character</a>
-            </div>
 
+
+            <div className="greatejob-font greatejob-slogan">
+              {this.props.children}
+            </div>
+          
             <a href="#screens">
             <button className="greatejob-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
               <i className="material-icons">expand_more</i>
