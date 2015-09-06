@@ -8,6 +8,7 @@ import Login from 'views/Login';
 import RequireLogin from 'views/RequireLogin';
 import LoginSuccess from 'views/LoginSuccess';
 import Survey from 'views/Survey';
+import FindJobs from 'views/FindJobs';
 import NotFound from 'views/NotFound';
 
 export default function(store) {
@@ -21,6 +22,7 @@ export default function(store) {
         <Route path="/loginSuccess" component={LoginSuccess}/>
       </Route>
       <Route path="/survey" component={Survey}/>
+      <Route path="/findjobs" component={FindJobs}/>
       <Route path="*" component={NotFound}/>
     </Route>
   );

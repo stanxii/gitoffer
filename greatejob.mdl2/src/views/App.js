@@ -71,46 +71,105 @@ export default class App extends Component {
     router.removeTransitionHook(this.transitionHook);
   }
 
+  componentDidUpdate() {
+    componentHandler.upgradeDom();
+  }
+
   render() {
     const {user} = this.props;
     const styles = require('./App.scss');
     return (
-      <div className={styles.app}>
+      <div >
         <DocumentMeta {...meta}/>
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="container">
-            <Link to="/" className="navbar-brand">
-              <div className={styles.brand}/>
-              React Redux Example
-            </Link>
 
-            <ul className="nav navbar-nav">
-              <li><Link to="/widgets">Widgets</Link></li>
-              <li><Link to="/survey">Survey</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              {!user && <li><Link to="/login">Login</Link></li>}
-              {user && <li className="logout-link"><a href="/logout" onClick={::this.handleLogout}>Logout</a></li>}
-            </ul>
-            {user &&
-            <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as <strong>{user.name}</strong>.</p>}
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href="https://github.com/erikras/react-redux-universal-hot-example"
-                   target="_blank" title="View on Github"><i className="fa fa-github"/></a>
-              </li>
-            </ul>
+        <div className="greatejob-layout-waterfall mdl-layout mdl-js-layout">
+          <header className="mdl-layout__header mdl-layout__header--waterfall">
+            {/*<!-- Top row, always visible --> */}
+            <div className="mdl-layout__header-row">
+              {/*<!-- Title -->*/}
+              <span className="mdl-layout-title">GreateJob</span>
+              <div className="mdl-layout-spacer"></div>
+              {/* <!-- Navigation --> */}
+              <nav className="mdl-navigation">
+                <a className="mdl-navigation__link" href="/">Find Jobs</a>
+                <a className="mdl-navigation__link" href="">Employers / Post Job</a>
+                <a className="mdl-navigation__link" href="">Upload your resume</a>
+                <a className="mdl-navigation__link" href="">Sign in</a>
+              </nav>
+            </div>
+          </header>
+          <div className="mdl-layout__drawer">
+            <span className="mdl-layout-title">GreateJob</span>
+            <nav className="mdl-navigation">
+              <a className="mdl-navigation__link" href="/">Find Jobs</a>
+              <a className="mdl-navigation__link" href="">Post Job</a>
+              <a className="mdl-navigation__link" href="">Submit resume</a>
+              <a className="mdl-navigation__link" href="">Sign in</a>
+            </nav>
           </div>
-        </nav>
-        <div className={styles.appContent}>
-          {this.props.children}
-        </div>
-        <InfoBar/>
+          <main className="mdl-layout__content">
+            <div className="page-content">{/*<!-- Your content goes here -->*/}
+              {this.props.children}
+            </div>
 
-        <div className="well text-center">
-          Have questions? Ask for help <a
-          href="https://github.com/erikras/react-redux-universal-hot-example/issues"
-          target="_blank">on Github</a> or in the <a
-          href="http://www.reactiflux.com/" target="_blank">#react-redux-universal</a> Slack channel.
+            {/*footer bar */}
+            <footer className="mdl-mega-footer">
+              <div className="mdl-mega-footer__middle-section">
+
+                <div className="mdl-mega-footer__drop-down-section">
+                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
+                  <h1 className="mdl-mega-footer__heading">Features</h1>
+                  <ul className="mdl-mega-footer__link-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Updates</a></li>
+                  </ul>
+                </div>
+
+                <div className="mdl-mega-footer__drop-down-section">
+                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
+                  <h1 className="mdl-mega-footer__heading">Details</h1>
+                  <ul className="mdl-mega-footer__link-list">
+                    <li><a href="#">Specs</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Resources</a></li>
+                  </ul>
+                </div>
+
+                <div className="mdl-mega-footer__drop-down-section">
+                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
+                  <h1 className="mdl-mega-footer__heading">Technology</h1>
+                  <ul className="mdl-mega-footer__link-list">
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Patterns</a></li>
+                    <li><a href="#">Usage</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contracts</a></li>
+                  </ul>
+                </div>
+
+                <div className="mdl-mega-footer__drop-down-section">
+                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
+                  <h1 className="mdl-mega-footer__heading">FAQ</h1>
+                  <ul className="mdl-mega-footer__link-list">
+                    <li><a href="#">Questions</a></li>
+                    <li><a href="#">Answers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div className="mdl-mega-footer__bottom-section">
+                <div className="mdl-logo">Title</div>
+                <ul className="mdl-mega-footer__link-list">
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+              </div>
+            </footer>
+          </main>
         </div>
       </div>
     );
@@ -132,4 +191,3 @@ export default class App extends Component {
     return Promise.all(promises);
   }
 }
-
