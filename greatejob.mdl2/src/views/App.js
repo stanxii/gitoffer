@@ -110,70 +110,41 @@ export default class App extends Component {
           <main className="mdl-layout__content">
             <div className="page-content">{/*<!-- Your content goes here -->*/}
               {this.props.children}
+
             </div>
 
             {/*footer bar */}
-            <footer className="mdl-mega-footer">
-              <div className="mdl-mega-footer__middle-section">
-
-                <div className="mdl-mega-footer__drop-down-section">
-                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
-                  <h1 className="mdl-mega-footer__heading">Features</h1>
-                  <ul className="mdl-mega-footer__link-list">
-                    <li><a href="#">About</a></li>
+            <footer className="greate-footer mdl-mini-footer">
+                <div className="mdl-mini-footer__left-section">
+					<ul className="mdl-mini-footer__link-list">
+                    <li><a href="/about">About</a></li>
                     <li><a href="#">Terms</a></li>
                     <li><a href="#">Partners</a></li>
                     <li><a href="#">Updates</a></li>
                   </ul>
                 </div>
-
-                <div className="mdl-mega-footer__drop-down-section">
-                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
-                  <h1 className="mdl-mega-footer__heading">Details</h1>
-                  <ul className="mdl-mega-footer__link-list">
-                    <li><a href="#">Specs</a></li>
-                    <li><a href="#">Tools</a></li>
-                    <li><a href="#">Resources</a></li>
+				
+				<div className="mdl-mini-footer__right-section">
+					<ul className="mdl-mini-footer__link-list">
+                    <li className="mdl-mini-footer--social-btn"><a title="Twitter" role="button" className="social-btn social-btn__twitter" href="https://twitter.com/googledesign"><i className="fa fa-twitter fa-fw"></i></a></li>
+                    <li>
+						<a href="#">Terms</a>
+						
+						<a href="#" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+						  <i class="material-icons">share</i>
+						</a>
+					</li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Updates</a></li>
                   </ul>
-                </div>
-
-                <div className="mdl-mega-footer__drop-down-section">
-                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
-                  <h1 className="mdl-mega-footer__heading">Technology</h1>
-                  <ul className="mdl-mega-footer__link-list">
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Patterns</a></li>
-                    <li><a href="#">Usage</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contracts</a></li>
-                  </ul>
-                </div>
-
-                <div className="mdl-mega-footer__drop-down-section">
-                  <input className="mdl-mega-footer__heading-checkbox" type="checkbox" checked />
-                  <h1 className="mdl-mega-footer__heading">FAQ</h1>
-                  <ul className="mdl-mega-footer__link-list">
-                    <li><a href="#">Questions</a></li>
-                    <li><a href="#">Answers</a></li>
-                    <li><a href="#">Contact us</a></li>
-                  </ul>
-                </div>
-
-              </div>
-
-              <div className="mdl-mega-footer__bottom-section">
-                <div className="mdl-logo">Title</div>
-                <ul className="mdl-mega-footer__link-list">
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Privacy & Terms</a></li>
-                </ul>
-              </div>
+                </div>              
             </footer>
           </main>
         </div>
       </div>
     );
   }
+
 
   handleLogout(event) {
     event.preventDefault();

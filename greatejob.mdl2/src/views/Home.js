@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import CounterButton from '../components/CounterButton';
 import GithubButton from '../components/GithubButton';
 
-
+import SearchBar from '../components/SearchBar';
 
 export default class Home extends Component {
   render() {
@@ -12,8 +12,16 @@ export default class Home extends Component {
     const logoImage = require('./logo.png');
     return (
       <div >
-        <p> hello homepage </p>
+        <SearchBar  change={::this.handleChange} search={::this.handleSearch}/>
       </div>
     );
+  }
+
+  handleChange(queryString) {
+    console.log('handleChange queryString='+ queryString);
+  }
+
+  handleSearch(queryString) {
+    ::this.transitionTo('/findjobs', {page: 10}, {queryString: queryString});
   }
 }
