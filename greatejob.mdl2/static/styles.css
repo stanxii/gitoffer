@@ -1,5 +1,14 @@
+
+.body {
+  font-size: 16px;
+}
+
 .findJobsBtn {
   margin-bottom: 7px;
+}
+
+.scorial-button {
+  margin: 0 3px;
 }
 
 .what {

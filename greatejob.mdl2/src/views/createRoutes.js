@@ -10,6 +10,10 @@ import LoginSuccess from 'views/LoginSuccess';
 import Survey from 'views/Survey';
 import FindJobs from 'views/FindJobs';
 import Contact from 'views/Contact';
+import Register from 'views/Register';
+import Privacy  from 'views/Privacy';
+import TermofUse   from 'views/TermofUse';
+import HelpCenter from 'views/HelpCenter';
 import NotFound from 'views/NotFound';
 
 export default function(store) {
@@ -25,6 +29,10 @@ export default function(store) {
       <Route path="/survey" component={Survey}/>
       <Route path="/findjobs" component={FindJobs}/>
       <Route path="/contact" component={Contact}/>
+	  <Route path="/register" component={Register}/>
+	  <Route path="/privacy" component={Privacy}/>
+	  <Route path="/term" component={TermofUse}/>
+	  <Route path="/helpcenter" component={HelpCenter}/>
       <Route path="*" component={NotFound}/>
     </Route>
   );

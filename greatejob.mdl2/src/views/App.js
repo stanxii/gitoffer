@@ -92,8 +92,9 @@ export default class App extends Component {
               {/* <!-- Navigation --> */}
               <nav className="mdl-navigation">
                 <a className="mdl-navigation__link" href="/">Find Jobs</a>
-                <a className="mdl-navigation__link" href="">Employers / Post Job</a>
+                <a className="mdl-navigation__link" href="">Employers /Post Job</a>
                 <a className="mdl-navigation__link" href="">Upload your resume</a>
+				<a className="mdl-navigation__link" href="/register">Register</a>
                 <a className="mdl-navigation__link" href="">Sign in</a>
               </nav>
             </div>
@@ -118,24 +119,22 @@ export default class App extends Component {
                 <div className="mdl-mini-footer__left-section">
 					<ul className="mdl-mini-footer__link-list">
                     <li><a href="/about">About</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Updates</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+					<li><a href="#">Alert jobs Mail</a></li>
+					<li><a href="/privacy">Privacy</a></li>
+					<li><a href="/term">Term of Use</a></li>        
+                    <li><a href="/helpcenter">Help Center</a></li>
                   </ul>
                 </div>
 				
-				<div className="mdl-mini-footer__right-section">
-					<ul className="mdl-mini-footer__link-list">
-                    <li className="mdl-mini-footer--social-btn"><a title="Twitter" role="button" className="social-btn social-btn__twitter" href="https://twitter.com/googledesign"><i className="fa fa-twitter fa-fw"></i></a></li>
-                    <li>
-						<a href="#">Terms</a>
 						
-						<a href="#" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-						  <i class="material-icons">share</i>
-						</a>
-					</li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Updates</a></li>
+				<div className="mdl-mini-footer__right-section">
+				  <ul className="mdl-mini-footer__link-list">
+				    <li>© 2015 GreateJob Inc</li>
+                    <li><a className="scorial-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--twitter" target="_blank" title="Share on Twitter" href="http://twitter.com/home?status="><i className="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                    <li><a className="scorial-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--facebook" target="_blank" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u="><i className="fa fa-facebook fa-fw"></i> Facebook</a></li>						
+                    <li><a className="scorial-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--googleplus" target="_blank" title="Share on Google+" href="https://plus.google.com/share?url="><i className="fa fa-google-plus fa-fw"></i> Google+</a></li>
+                    <li><a className="scorial-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--linkedin" target="_blank" title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary="><i className="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
                   </ul>
                 </div>              
             </footer>
