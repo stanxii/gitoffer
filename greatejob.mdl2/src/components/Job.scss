@@ -1,3 +1,42 @@
-.job {
-  font-variant: italics;
+.jobtitle_h2{ 
+	color: #06c;
+    display: inline;
+    margin: 0 0 1px;
+}
+
+
+.jobtitle a, a.jobtitle {
+    color: #00c;;
+	
+}
+
+a, a:link, .link {
+    color: #00c;
+    cursor: pointer;
+}
+
+.jobDetail{
+    padding: 7px 0;
+}
+
+.company {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #007f00;
+    display: inline;
+	margin: 0px 0px;
+	
+}
+
+.location {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #666;
+	margin: 0px 0px;
+	
+}
+
+.jobDetail_description {
+	font-size: 18px;
+    color: #000;
 }
