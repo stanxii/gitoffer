@@ -3,6 +3,10 @@
   font-size: 22px;
 }
 
+.jobslistUL {
+	margin-left: -40px;
+}
+
 .findJobsBtn {
   margin-bottom: 7px;
 }

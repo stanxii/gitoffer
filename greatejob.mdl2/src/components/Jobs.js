@@ -19,7 +19,7 @@ export default class Jobs extends Component {
               {
 
                 jobs && jobs.length &&
-                 <ul>
+                 <ul className="jobslistUL">
                    {
                      jobs.map((job) => <Job job={job._source} />)
                    }
