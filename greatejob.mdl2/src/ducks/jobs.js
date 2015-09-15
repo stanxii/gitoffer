@@ -3,7 +3,9 @@ const SEARCH_SUCCESS = 'redux-example/jobs/SEARCH_SUCCESS';
 const SEARCH_FAIL = 'redux-example/jobs/SEARCH_FAIL';
 
 const initialState = {
-  loaded: false
+  loaded: false,
+  pageNum: 0,
+  jobs: []
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -18,7 +20,8 @@ export default function reducer(state = initialState, action = {}) {
         ...state,
         loading: false,
         loaded: true,
-        data: action.result,
+        jobs: action.result.jobs,
+        pageNum: action.result.pageNum,
         error: null
       };
     case SEARCH_FAIL:
@@ -27,6 +30,7 @@ export default function reducer(state = initialState, action = {}) {
         loading: false,
         loaded: false,
         data: null,
+        pageNum: 0,
         error: action.error
       };
     default:

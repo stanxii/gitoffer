@@ -17,39 +17,11 @@ const initJobs = [
 ];
 
 
-export function searchJobs(req) {
-  let queryString = req.session.queryString;
-  let jobs = [];
-  if (!queryString) {
-    jobs = initJobs;
-    return jobs;
-  }else{
-    esclient_v17.search({
-        index: 'greatejob',
-        type: 'job',
-        body: {
-            query: {
-                query_string:{
-                   query:"ios developer"
-                }
-            }
-        }
-    }, function (error, resp) {
-
-      if(error){
-        return [];
-        reject('loadSearch load fails 33% of the time. You were unlucky.');
-      }else{
-         resolve(resp.hits.hits);
-      }
-    });
-  }
-}
-
 export default function loadJobs(req) {
   return new Promise((resolve, reject) => {
     // make async call to database
     setTimeout(() => {
+      console.log('queryString======'+req.session.queryString);
           esclient_v17.search({
             index: 'greatejob',
             type: 'job',
@@ -63,10 +35,10 @@ export default function loadJobs(req) {
         }, function (error, resp) {
 
           if(error){
-            return [];
-            reject('loadSearch load fails 33% of the time. You were unlucky.');
+            return {hits:[], pageNum:0};
+            reject('loadJobs load faild cant find. You were unlucky.');
           }else{
-             resolve(resp.hits.hits);
+             resolve({jobs: resp.hits.hits, pageNum: resp.hits.total});
           }
         });
 

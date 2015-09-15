@@ -74,6 +74,7 @@
     "react": "0.13.3",
     "react-document-meta": "^0.1.4",
     "react-inline-css": "1.2.1",
+    "react-paginate": "^0.2.0",
     "react-redux": "^2.0.0",
     "react-router": "v1.0.0-beta2",
     "redux": "^2.0.0",

@@ -13,11 +13,7 @@ export default class Jobs extends Component {
 
     return (
       <div>
-        <div className={ " mdl-grid"}>
-            <div className="mdl-cell mdl-cell--3-col"></div>
-            <div className="mdl-cell mdl-cell--6-col">
               {
-
                 jobs && jobs.length &&
                  <ul className="jobslistUL">
                    {
@@ -25,9 +21,6 @@ export default class Jobs extends Component {
                    }
                  </ul>
               }
-            </div>
-            <div className="mdl-cell mdl-cell--3-col"></div>
-        </div>
       </div>
     )
   }
