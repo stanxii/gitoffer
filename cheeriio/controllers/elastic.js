@@ -1,15 +1,22 @@
 //elastic search engine
-var elasticsearch = require('elasticsearch');
-var esclient_v17 = new elasticsearch.Client({
-  host: '192.168.31.171:9200',
-  log: 'trace'
-});
+
+  var elasticsearch = require('elasticsearch');
+  console.log('importing....elastic.....');
+  var esclient_v17 = new elasticsearch.Client({
+    host: '192.168.31.171:9200',
+    log: 'trace',
+    sniffOnStart: true,
+    sniffInterval: 300000
+  });
+
 
 
 var ElasticDAO = function() {};
 
 ElasticDAO.prototype.putMapping = function(index, type) {
 
+
+   console.log('putMapping....elastic.....');
     var snowball = {
         'job' : {
             'properties' : {
@@ -72,7 +79,6 @@ ElasticDAO.prototype.putMapping = function(index, type) {
         }
     });
 
-
 };
 
 ElasticDAO.prototype.addIndex =  function(index, type, indexid, data) {
@@ -88,7 +94,6 @@ ElasticDAO.prototype.addIndex =  function(index, type, indexid, data) {
             //mongoid not exist in index.
             esclient_v17.index({
                 index: index,
-                type: type,
                 id: indexid,
                 body: data
             },function(err, response) {

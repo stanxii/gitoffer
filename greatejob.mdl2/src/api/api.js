@@ -5,6 +5,8 @@ import config from '../config';
 import * as actions from './routes/index';
 import PrettyError from 'pretty-error';
 
+
+
 const pretty = new PrettyError();
 const app = express();
 app.use(session({

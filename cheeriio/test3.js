@@ -3,10 +3,13 @@ var express = require('express');
 var iconv = require('iconv-lite');
 var cheerio = require('cheerio');
 var superagent = require('superagent');
- 
+
+
+ //https://github.com/ageitgey/node-unfluff
+
 //建立express实例
 var app = express();
- 
+
 app.get('/', function (req, res, next) {
   // 用 superagent 去抓取 https://cnodejs.org/ 的内容
   superagent.get('http://www.indeed.com/rc/clk?jk=c796cb53fa83670c')
@@ -25,7 +28,10 @@ app.get('/', function (req, res, next) {
       var $ = cheerio.load(sres.text);
       var items = [];
       var jobdes =  $('#js-job-description.js-job-description').text();
-      console.log(jobdes);
+//      console.log(jobdes);
+
+      var text = $('body').text();
+      console.log(text);
 
       /*
       $('#topic_list .topic_title').each(function (idx, element) {
@@ -35,13 +41,13 @@ app.get('/', function (req, res, next) {
           href: $element.attr('href')
         });
       });
- 
+
       res.send(items);
       */
       res.send({'sts': 'jobdes'});
     });
 });
- 
+
 app.listen(3000, function (req, res) {
   console.log('app is running at port 3000');
 });

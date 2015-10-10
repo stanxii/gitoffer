@@ -4,8 +4,12 @@
 // var s = require('semantic-ui');
 
 //elastic search engine
+//var esService  = require('../elastic/elastic.js');
+
 var elasticsearch = require('elasticsearch');
-var esclient_v17 = new elasticsearch.Client({
+
+console.log('sssss-------------------------');
+var esclient_v17 =new elasticsearch.Client({
   host: '192.168.31.171:9200',
   log: 'trace'
 });
@@ -20,9 +24,12 @@ const initJobs = [
 export default function loadJobs(req) {
   return new Promise((resolve, reject) => {
     // make async call to database
-    setTimeout(() => {
       console.log('queryString======'+req.session.queryString);
-          esclient_v17.search({
+      //var termToSearch = req.session.queryString;
+      // var termToSearch = 'ios developer';
+      // esService.performSearch(termToSearch)
+
+        esclient_v17.search({
             index: 'greatejob',
             type: 'job',
             body: {
@@ -35,14 +42,15 @@ export default function loadJobs(req) {
         }, function (error, resp) {
 
           if(error){
-            return {hits:[], pageNum:0};
-            reject('loadJobs load faild cant find. You were unlucky.');
+            jeject({jobs:[], pageNum:0});
+            //return {jobs:[], pageNum:0};
+            //reject('loadJobs load faild cant find. You were unlucky.');
           }else{
              resolve({jobs: resp.hits.hits, pageNum: resp.hits.total});
           }
         });
 
-    }, 1000); // simulate async load
+
   });
 }
 
