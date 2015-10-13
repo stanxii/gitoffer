@@ -23,10 +23,10 @@ superagentUrlDAO.prototype.request = function(url) {
     superagent.get(url)
         .end((err,res) => {
             if(err) {
-              //console.log('reject err=');
+              console.log('reject err=');
               reject(err);
             }else{
-              //console.log('resolve res=' + res);
+              console.log('resolve res=' + res);
               resolve(res);
             }
      });
