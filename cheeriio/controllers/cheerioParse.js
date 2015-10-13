@@ -99,5 +99,77 @@ cheerioParseDAO.prototype.getFindJobsTitlelinks = function(res) {
   });
 }
 
+cheerioParseDAO.prototype.getCompanyslinks = function(res) {
+  return new Promise((resolve) => {
+    console.log('....now will getCompanyslinks parse url' );
+    var $ = cheerio.load(res.text);
+
+    //find jobtitls url to jsonfile
+    var data = {
+      seeds: []
+    };
+
+    $('#companies  .companyTitle').each(function (idx, element) {
+        var $element = $(element);
+        var href = $element.attr('href');
+        data.seeds.push({
+                link: 'http://indeed.com' + href
+              });
+      });
+
+    console.log(data);
+    resolve(data);
+
+  });
+}
+
+cheerioParseDAO.prototype.getStateslinks = function(res) {
+  return new Promise((resolve) => {
+    console.log('....now will getStateslinks parse url' );
+    var $ = cheerio.load(res.text);
+
+    //find jobtitls url to jsonfile
+    var data = {
+      seeds: []
+    };
+
+    $('#cities  .cityTitle').each(function (idx, element) {
+        var $element = $(element);
+        var href = $element.attr('href');
+        data.seeds.push({
+                link: 'http://indeed.com' + href
+              });
+      });
+
+    console.log(data);
+    resolve(data);
+
+  });
+}
+
+cheerioParseDAO.prototype.getCatslinks = function(res) {
+  return new Promise((resolve) => {
+    console.log('....now will cheerio parse url' );
+    var $ = cheerio.load(res.text);
+
+    //find jobtitls url to jsonfile
+    var data = {
+      seeds: []
+    };
+
+    $('#titles  .jobTitle').each(function (idx, element) {
+        var $element = $(element);
+        var href = $element.attr('href');
+        data.seeds.push({
+                link: 'http://indeed.com' + href
+              });
+      });
+
+    console.log(data);
+    resolve(data);
+
+  });
+}
+
 
 module.exports = new cheerioParseDAO();

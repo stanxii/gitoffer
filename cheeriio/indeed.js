@@ -18,6 +18,24 @@ function cbcallback(res,data) {
     crawlerIndeedJobsDAO.findJobsTitls(vlink);
   });
 
+  data.data.companys.forEach((v) => {
+    vlink = 'http://indeed.com'+v.link;
+    console.log('vlink=' + vlink);
+    crawlerIndeedJobsDAO.getCompanyslinks(vlink);
+  });
+
+  data.data.states.forEach((v) => {
+    vlink = 'http://indeed.com'+v.link;
+    console.log('vlink=' + vlink);
+    crawlerIndeedJobsDAO.getStateslinks(vlink);
+  });
+
+  data.data.cats.forEach((v) => {
+    vlink = 'http://indeed.com'+v.link;
+    console.log('vlink=' + vlink);
+    crawlerIndeedJobsDAO.getCatslinks(vlink);
+  });
+
   res.send(data);
   res.send(JSON.stringify(data));
 }
