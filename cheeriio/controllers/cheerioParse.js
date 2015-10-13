@@ -55,7 +55,7 @@ cheerioParseDAO.prototype.getFindJobslinks = function(res) {
                     link: href
                   });
     });
-    
+
     //cat
     $('#categories  a').each(function (idx, element) {
             var $element = $(element);
@@ -70,36 +70,33 @@ cheerioParseDAO.prototype.getFindJobslinks = function(res) {
   //     if(reTitle.test(link)){
 
 
-    console.log(data);
+    //console.log('before data' + JSON.stringify(data));
     resolve(data);
   });
 }
 
-cheerioParseDAO.prototype.getFindJobsTitlelinks = function(url) {
-
-
+cheerioParseDAO.prototype.getFindJobsTitlelinks = function(res) {
+  return new Promise((resolve) => {
+    console.log('....now will cheerio parse url' );
     var $ = cheerio.load(res.text);
-    var items = [];
-    //console.log(res.text);
 
-    $('a').each((i,e) => {
-      var link = $(e).attr('href');
+    //find jobtitls url to jsonfile
+    var data = {
+      seeds: []
+    };
 
-      var strRegex = '^/find-jobs.jsp?';
-      var re=new RegExp(strRegex);
-      if(re.test(link)  ){
-        //url like ok
-        if(link !=='/find-jobs.jsp?state=' && link !=='/find-jobs.jsp'){
-          console.log(link);
-          items.push({
-            href: link
-          });
-        }
-      }
+    $('#letters  .jobTitle').each(function (idx, element) {
+        var $element = $(element);
+        var href = $element.attr('href');
+        data.seeds.push({
+                link: 'http://indeed.com' + href
+              });
+      });
 
-    });
-    console.log(jobdes);
+    console.log(data);
+    resolve(data);
 
+  });
 }
 
 

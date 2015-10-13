@@ -27,7 +27,8 @@ var cheerioParseDAO = require('./cheerioParse');
 
 var crawlerIndeedJobsDAO = function() {}
 
-crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb) {
+crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb, response) {
+  var _this = this;
   superagentUrlDAO.request(url).then((res) => {
       //console.log(res);
       //console.log(res.status);
@@ -38,6 +39,24 @@ crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb) {
       console.log('fuck successof');
       cheerioParseDAO.getFindJobslinks(res).then((data) => {
           console.log('la la la fuck success findJobslinks(res).then');
+          //console.log('after data' + JSON.stringify(data));
+
+          //find jobtitls url to jsonfile
+          // var vlink;
+          // data.titles.forEach((v) => {
+          //   vlink = 'http://indeed.com'+v.link;
+          //   console.log('vlink=' + vlink);
+          //   this.findJobsTitls(vlink);
+          // });
+
+          //find company urls to josonfile
+
+          //find state urls to json file
+
+          //find categories to josonfile
+
+
+
           cb(response, {err:0, data: data});
 
           //data.map()
@@ -51,26 +70,19 @@ crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb) {
 }
 
 crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
-  return new Promise((resolve, reject) => {
     superagentUrlDAO.request(url).then((res) => {
-        //console.log(res);
-        //console.log(res.status);
-        //console.log('res.text=' + sres.text);
-        //console.log('res.boday text===' + JSON.stringify(res.body));
-        //console.logsres.header);
-        //var $2 = cheerio.load(res.text);
-        console.log('fuck successof');
-        cheerioParseDAO.getFindJobslinks(res).then((data) => {
-            console.log('la la la fuck success findJobslinks(res).then');
-            cb(response, {err:0, data: data});
-        });
+
+      console.log('rawlerIndeedJobsDAO.prototype.findJobsTitls url====' + url);
+      cheerioParseDAO.getFindJobsTitlelinks(res).then((data) => {
+          console.log('la la la fuck success findJobsTitls....(res).then');
+          console.log(data);
+      });
 
     }, (err) => {
-        console.log('fuck error in indeedJobsDao');
+        console.log('fuck error in findJobsTitls indeedJobsDao');
         //console.log(err);
         return {err:1};
     });
-  });
 }
 
 module.exports = new crawlerIndeedJobsDAO();

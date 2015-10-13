@@ -10,6 +10,14 @@ var app = express();
 
 function cbcallback(res,data) {
   console.log('fuckkkkkkkkkkerrr.... data=' + data);
+
+  var vlink;
+  data.data.titles.forEach((v) => {
+    vlink = 'http://indeed.com'+v.link;
+    console.log('vlink=' + vlink);
+    crawlerIndeedJobsDAO.findJobsTitls(vlink);
+  });
+
   res.send(data);
   res.send(JSON.stringify(data));
 }
