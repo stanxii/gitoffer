@@ -22,44 +22,54 @@ cheerioParseDAO.prototype.getFindJobslinks = function(res) {
   return new Promise((resolve) => {
     var $ = cheerio.load(res.text);
     var data = {
-      seeds: [],
       titles: [],
-      companys: []
+      companys: [],
+      states: [],
+      cats: []
     };
     //console.log(res.text);
 
-    $('a').each((i,e) => {
-      var link = $(e).attr('href');
 
-      var strTitleRegex = '^/find-jobs.jsp\\?title';
-      var strCompRegex = '/find-jobs.jsp\\?company';
-      var strRegex = '^/find-jobs.jsp';
-      var re=new RegExp(strRegex);
-      var reTitle = new RegExp(strTitleRegex);
-      var reComp = new RegExp(strCompRegex);
-      console.log('dddddooo...');
-      if(re.test(link)  ){
-        //url like ok
-        if(link !=='/find-jobs.jsp?state=' && link !=='/find-jobs.jsp'){
-          console.log(link);
-          //like titleurl
-          if(reTitle.test(link)){
+
+    $('#letter_selector  a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
             data.titles.push({
-              link: link
-            });
-          }else if(reComp.test(link)){
-            data.companys.push({
-              link: link
-            });
-          }else{
-            data.seeds.push({
-              seed: link
-            });
-          }
-        }
-      }
-
+                    link: href
+                  });
     });
+
+    $('#company_selector  a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
+            data.companys.push({
+                    link: href
+                  });
+    });
+
+    //state
+    $('#states a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
+            data.states.push({
+                    link: href
+                  });
+    });
+    
+    //cat
+    $('#categories  a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
+            data.cats.push({
+                    link: href
+                  });
+    });
+
+  //     var strStateRegex = '^/find-jobs.jsp\\?state=';
+  //     var reTitle = new RegExp(strTitleRegex);
+  //     if(reTitle.test(link)){
+
+
     console.log(data);
     resolve(data);
   });
