@@ -95,4 +95,71 @@ crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
     });
 }
 
+crawlerIndeedJobsDAO.prototype.findCompanys = function(url) {
+  
+    superagentUrlDAO.request(url).then((res) => {
+
+      cheerioParseDAO.getCompanyslinks(res).then((data) => {
+          console.log('la la la fuck  getCompanyslinks....(res).then');
+          console.log('findCompanys getCompanyslinks url====' + url);
+          //console.log(data);
+          //save titles seeds into mongodb
+
+          data.seeds.map((v) => {
+            SeedsDAO.insertUniqSeed(v.link);
+          });
+
+      });
+
+    }, (err) => {
+        console.log('fuck error in findCompanys indeedJobsDao');
+        //console.log(err);
+        return {err:1};
+    });
+}
+
+crawlerIndeedJobsDAO.prototype.getStateslinks = function(url) {
+    superagentUrlDAO.request(url).then((res) => {
+
+      cheerioParseDAO.getStateslinks(res).then((data) => {
+          console.log('la la la fuck  getStateslinks....(res).then');
+          console.log('crawlerIndeedJobsDAO getStateslinks url====' + url);
+          //console.log(data);
+          //save titles seeds into mongodb
+
+          data.seeds.map((v) => {
+            SeedsDAO.insertUniqSeed(v.link);
+          });
+
+      });
+
+    }, (err) => {
+        console.log('fuck error in getStateslinks ');
+        //console.log(err);
+        return {err:1};
+    });
+}
+
+crawlerIndeedJobsDAO.prototype.getCatslinks = function(url) {
+    superagentUrlDAO.request(url).then((res) => {
+
+      cheerioParseDAO.getCatslinks(res).then((data) => {
+          console.log('la la la fuck  getCatslinks....(res).then');
+          console.log('crawlerIndeedJobsDAO getCatslinks url====' + url);
+          //console.log(data);
+          //save titles seeds into mongodb
+
+          data.seeds.map((v) => {
+            SeedsDAO.insertUniqSeed(v.link);
+          });
+
+      });
+
+    }, (err) => {
+        console.log('fuck error in getCatslinks getCatslinks');
+        //console.log(err);
+        return {err:1};
+    });
+}
+
 module.exports = new crawlerIndeedJobsDAO();

@@ -28,7 +28,7 @@ function cbcallback(res,data) {
   data.data.companys.forEach((v) => {
     vlink = 'http://indeed.com'+v.link;
     console.log('vlink=' + vlink);
-    crawlerIndeedJobsDAO.getCompanyslinks(vlink);
+    crawlerIndeedJobsDAO.findCompanys(vlink);
   });
 
   data.data.states.forEach((v) => {
