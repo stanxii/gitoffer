@@ -1,10 +1,17 @@
 //引入依赖
 var express = require('express');
+var mongoose = require('mongoose');
 var iconv = require('iconv-lite');
 
 var crawlerIndeedJobsDAO = require('./controllers/crawlerIndeedJobs');
  //https://github.com/ageitgey/node-unfluff
 var crawlerDAO = require('./controllers/crawler');
+
+//mongodb
+mongoose.connect('mongodb://192.168.31.171/jobSearchEngine');
+mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
+
+
 //建立express实例
 var app = express();
 

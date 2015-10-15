@@ -5,6 +5,9 @@
 
 //var cheerio = require('cheerio');
 
+//seeds controller
+var SeedsDAO = require('./seeds');
+
 var superagentUrlDAO = require('./superagentUrl');
 var cheerioParseDAO = require('./cheerioParse');
 
@@ -72,10 +75,17 @@ crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb, response) {
 crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
     superagentUrlDAO.request(url).then((res) => {
 
-      console.log('rawlerIndeedJobsDAO.prototype.findJobsTitls url====' + url);
+
       cheerioParseDAO.getFindJobsTitlelinks(res).then((data) => {
           console.log('la la la fuck success findJobsTitls....(res).then');
-          console.log(data);
+          console.log('rawlerIndeedJobsDAO.prototype.findJobsTitls url====' + url);
+          //console.log(data);
+          //save titles seeds into mongodb
+
+          data.seeds.map((v) => {
+            SeedsDAO.insertUniqSeed(v.link);
+          });
+
       });
 
     }, (err) => {

@@ -77,7 +77,6 @@ cheerioParseDAO.prototype.getFindJobslinks = function(res) {
 
 cheerioParseDAO.prototype.getFindJobsTitlelinks = function(res) {
   return new Promise((resolve) => {
-    console.log('....now will cheerio parse url' );
     var $ = cheerio.load(res.text);
 
     //find jobtitls url to jsonfile
@@ -93,7 +92,6 @@ cheerioParseDAO.prototype.getFindJobsTitlelinks = function(res) {
               });
       });
 
-    console.log(data);
     resolve(data);
 
   });
