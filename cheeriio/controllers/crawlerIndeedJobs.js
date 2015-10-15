@@ -6,7 +6,7 @@
 //var cheerio = require('cheerio');
 
 //seeds controller
-var SeedsDAO = require('./seeds');
+var IndeedsDAO = require('./indeedctrl');
 
 var superagentUrlDAO = require('./superagentUrl');
 var cheerioParseDAO = require('./cheerioParse');
@@ -83,7 +83,7 @@ crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
           //save titles seeds into mongodb
 
           data.seeds.map((v) => {
-            SeedsDAO.insertUniqSeed(v.link);
+            IndeedsDAO.insertUniqSeed(v.link);
           });
 
       });
@@ -96,7 +96,7 @@ crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
 }
 
 crawlerIndeedJobsDAO.prototype.findCompanys = function(url) {
-  
+
     superagentUrlDAO.request(url).then((res) => {
 
       cheerioParseDAO.getCompanyslinks(res).then((data) => {
@@ -106,7 +106,7 @@ crawlerIndeedJobsDAO.prototype.findCompanys = function(url) {
           //save titles seeds into mongodb
 
           data.seeds.map((v) => {
-            SeedsDAO.insertUniqSeed(v.link);
+            IndeedsDAO.insertUniqSeed(v.link);
           });
 
       });
@@ -128,7 +128,7 @@ crawlerIndeedJobsDAO.prototype.getStateslinks = function(url) {
           //save titles seeds into mongodb
 
           data.seeds.map((v) => {
-            SeedsDAO.insertUniqSeed(v.link);
+            IndeedsDAO.insertUniqSeed(v.link);
           });
 
       });
@@ -150,15 +150,15 @@ crawlerIndeedJobsDAO.prototype.getCatslinks = function(url) {
           //save titles seeds into mongodb
 
           data.seeds.map((v) => {
-            SeedsDAO.insertUniqSeed(v.link);
+            IndeedsDAO.insertUniqSeed(v.link);
           });
 
       });
 
     }, (err) => {
         console.log('fuck error in getCatslinks getCatslinks');
-        //console.log(err);
-        return {err:1};
+        console.log(err);
+        //return {err:1};
     });
 }
 

@@ -1,9 +1,9 @@
-var Seed = require('../models/Seed');
+var Seed = require('../models/Indeed');
 var moment = require('moment');
 
-var SeedsDAO = function() {};
+var IndeedsDAO = function() {};
 
-SeedsDAO.prototype.insertUniqSeed = function(seed) {
+IndeedsDAO.prototype.insertUniqSeed = function(seed) {
   var query = {url: seed};
   var doc = {url: seed, invalid: false, crawlerDate: moment()};
   var options = {upsert: true};
@@ -18,4 +18,4 @@ SeedsDAO.prototype.insertUniqSeed = function(seed) {
   });
 }
 
-module.exports = new SeedsDAO();
+module.exports = new IndeedsDAO();
