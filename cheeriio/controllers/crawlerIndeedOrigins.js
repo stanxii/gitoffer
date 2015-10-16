@@ -28,54 +28,63 @@ var cheerioParseDAO = require('./cheerioParse');
 //     alert(err)
 // });
 
-var crawlerIndeedJobsDAO = function() {}
+var crawlerIndeedJobsDAO = function() {};
 
-crawlerIndeedJobsDAO.prototype.findJobs = function(url, cb, response) {
-  var _this = this;
-  superagentUrlDAO.request(url).then((res) => {
-      //console.log(res);
-      //console.log(res.status);
-      //console.log('res.text=' + sres.text);
-      //console.log('res.boday text===' + JSON.stringify(res.body));
-      //console.logsres.header);
-      //var $2 = cheerio.load(res.text);
-      console.log('fuck successof');
-      cheerioParseDAO.getFindJobslinks(res).then((data) => {
-          console.log('la la la fuck success findJobslinks(res).then');
-          //console.log('after data' + JSON.stringify(data));
+crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
+  return new Promise((resolve, reject) => {
+    var _this = this;
+    superagentUrlDAO.request(url).then((res) => {
+        console.log('step 1 fetch top url seed successof');
+        //console.log(res.text);
+        return cheerioParseDAO.getNextPagelinks(res)
+    }).then((data) => {
+            console.log('step 2 la la la fuck get 100 pages url');
+            //console.log('after data' + JSON.stringify(data));
+            //save jobs to db
+            data.jobs.map((v) => {
+              IndeedsDAO.insertUniqOrigin(v.link);
+            });
 
-          //find jobtitls url to jsonfile
-          // var vlink;
-          // data.titles.forEach((v) => {
-          //   vlink = 'http://indeed.com'+v.link;
-          //   console.log('vlink=' + vlink);
-          //   this.findJobsTitls(vlink);
-          // });
+            return Promise.all(
+              data.pages.map((v) => {
+                var vlink = 'http://indeed.com'+v.link;
 
-          //find company urls to josonfile
+                return _this.crawlerOnePage(vlink);
+              }));
 
-          //find state urls to json file
-
-          //find categories to josonfile
-
-
-
-          cb(response, {err:0, data: data});
-
-          //data.map()
+      }).then((data) => {
+        console.log('crawlerOneSeed final date is' + moment());
+        console.log('all done data=' + data);
+        resolve(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        reject({err: 1});
       });
 
-  }, (err) => {
-      console.log('fuck error in indeedJobsDao');
-      //console.log(err);
-      return {err:1};
-  });
+    });
+}
+
+crawlerIndeedJobsDAO.prototype.crawlerOnePage = function(url) {
+  return new Promise((resolve, reject) => {
+      superagentUrlDAO.request(url).then((res) => {
+          console.log('step 1 fetch top url seed successof' + url);
+          return cheerioParseDAO.getNextJobLiks(res)
+        }).then((data) => {
+              console.log('step 2 la la la fuck get 100 pages url');
+              //console.log('after data' + JSON.stringify(data));
+              //save jobs to db
+              data.jobs.forEach((v) => {
+                var vlink = 'http://indeed.com'+v.link;
+                IndeedsDAO.insertUniqOrigin(vlink);
+              });
+              resolve(data);
+        });
+    });
 }
 
 crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
     superagentUrlDAO.request(url).then((res) => {
-
-
       cheerioParseDAO.getFindJobsTitlelinks(res).then((data) => {
           console.log('la la la fuck success findJobsTitls....(res).then');
           console.log('rawlerIndeedJobsDAO.prototype.findJobsTitls url====' + url);
@@ -83,7 +92,7 @@ crawlerIndeedJobsDAO.prototype.findJobsTitls = function(url) {
           //save titles seeds into mongodb
 
           data.seeds.map((v) => {
-            IndeedsDAO.insertUniqIneed(v.link);
+            IndeedsDAO.insertUniqSeed(v.link);
           });
 
       });

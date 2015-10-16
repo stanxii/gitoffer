@@ -169,5 +169,85 @@ cheerioParseDAO.prototype.getCatslinks = function(res) {
   });
 }
 
+cheerioParseDAO.prototype.getNextJobLiks = function(res) {
+  return new Promise((resolve) => {
+    var $ = cheerio.load(res.text);
+    var data = {
+      jobs: []
+    };
+
+    var strJobRegex = '^/rc/clk\\?jk=';
+    var reJob = new RegExp(strJobRegex);
+    //console.log(res.text);
+    $('#resultsCol .row.result h2.jobtitle  a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
+
+            if(reJob.test(href)){
+              data.jobs.push({
+                      link: href
+                    });
+                }
+    });
+
+    //console.log('before data' + JSON.stringify(data));
+    resolve(data);
+  });
+}
+
+cheerioParseDAO.prototype.getNextPagelinks = function(res) {
+  return new Promise((resolve) => {
+    var $ = cheerio.load(res.text);
+    var data = {
+      jobs: [],
+      pages: []
+    };
+
+    var strJobRegex = '^/rc/clk\\?jk=';
+    var reJob = new RegExp(strJobRegex);
+    $('#resultsCol .row.result h2.jobtitle  a').each(function (idx, element) {
+            var $element = $(element);
+            var href = $element.attr('href');
+            if(reJob.test(href)){
+              data.jobs.push({
+                    link: href
+                  });
+              }
+    });
+
+    var i=0;
+    //generate next 100 page.
+    $('.pagination a').each(function (idx, element) {
+      if(idx == 0) {
+        var $element = $(element);
+        var urlstart = $element.attr('href');
+        console.log('urlstart=' + urlstart);
+        var n = urlstart.indexOf("start=");
+        urlstart = urlstart.substring(0, n+6); //get start=
+        var seed = "";
+        var k=0;
+
+
+        for(i=0; i< 100; i++){
+          k += 10;
+          seed = urlstart + k;
+
+          data.pages.push({
+                  link: seed
+                });
+        }
+      }
+    
+    });
+
+
+
+
+
+    //console.log('before data' + JSON.stringify(data));
+    resolve(data);
+  });
+}
+
 
 module.exports = new cheerioParseDAO();
