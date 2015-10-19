@@ -1,5 +1,5 @@
 var Indeed = require('../models/Indeed');
-var Origin = require('../models/Origin');
+var JobSeed = require('../models/JobSeed');
 var moment = require('moment');
 
 var IndeedsDAO = function() {};
@@ -19,15 +19,15 @@ IndeedsDAO.prototype.insertUniqIneed = function(seed) {
   });
 }
 
-IndeedsDAO.prototype.insertUniqOrigin = function(url) {
-  var query = {url: url};
-  var doc = {url: url, valid: true, crawled: false, crawlerDate: moment()};
+IndeedsDAO.prototype.insertJobSeedOrigin = function(job) {
+  var query = {origin: job.link};
+  var doc = {title: job.title, origin: job.link, crawlerDate: moment()};
   var options = {new: true, upsert: true};
-  Origin.findOneAndUpdate(query, doc, options, function(err, doc) {
+  JobSeed.findOneAndUpdate(query, doc, options, function(err, doc) {
     if(err) {
         console.log(err);
     }else {
-          console.log('save doc ok' + doc);
+          console.log('save insertJobSeedOrigin doc ok' + doc);
     }
   });
 }

@@ -1,11 +1,13 @@
 var mongoose = require('mongoose');
 
 
-var originSchema = new mongoose.Schema({
-    url : String,
+var jobSeedSchema = new mongoose.Schema({
+    title : String,
+    origin : String,
+    seed : {type: String, default: ''},
     valid : {type: Boolean, default: true},
     crawled: {type: Boolean, default: false},
     crawlerDate: {type: Date, default: Date.now}
 });
 
-module.exports = mongoose.model('Origin', originSchema);
+module.exports = mongoose.model('JobSeed', jobSeedSchema);

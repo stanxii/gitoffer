@@ -5,6 +5,8 @@
 
 //var cheerio = require('cheerio');
 
+var moment = require('moment');
+
 //seeds controller
 var IndeedsDAO = require('./indeedctrl');
 
@@ -32,7 +34,6 @@ var crawlerIndeedJobsDAO = function() {};
 
 crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
   return new Promise((resolve, reject) => {
-    var _this = this;
     superagentUrlDAO.request(url).then((res) => {
         console.log('step 1 fetch top url seed successof');
         //console.log(res.text);
@@ -42,19 +43,12 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
             //console.log('after data' + JSON.stringify(data));
             //save jobs to db
             data.jobs.map((v) => {
-              IndeedsDAO.insertUniqOrigin(v.link);
+              IndeedsDAO.insertJobSeedOrigin(v);
             });
-
-            return Promise.all(
-              data.pages.map((v) => {
-                var vlink = 'http://indeed.com'+v.link;
-
-                return _this.crawlerOnePage(vlink);
-              }));
-
+            resolve(data);
       }).then((data) => {
         console.log('crawlerOneSeed final date is' + moment());
-        console.log('all done data=' + data);
+        //console.log('all done data=' + data);
         resolve(data);
       })
       .catch((err) => {
@@ -67,6 +61,7 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
 
 crawlerIndeedJobsDAO.prototype.crawlerOnePage = function(url) {
   return new Promise((resolve, reject) => {
+      console.log('now.... crawler one page url=' + url);
       superagentUrlDAO.request(url).then((res) => {
           console.log('step 1 fetch top url seed successof' + url);
           return cheerioParseDAO.getNextJobLiks(res)
@@ -79,6 +74,8 @@ crawlerIndeedJobsDAO.prototype.crawlerOnePage = function(url) {
                 IndeedsDAO.insertUniqOrigin(vlink);
               });
               resolve(data);
+        }).catch((err) => {
+          console.log('crawlerOnePage err');
         });
     });
 }

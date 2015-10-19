@@ -210,6 +210,7 @@ cheerioParseDAO.prototype.getNextPagelinks = function(res) {
             var href = $element.attr('href');
             if(reJob.test(href)){
               data.jobs.push({
+                    title: $element.text(),
                     link: href
                   });
               }
@@ -237,7 +238,7 @@ cheerioParseDAO.prototype.getNextPagelinks = function(res) {
                 });
         }
       }
-    
+
     });
 
 

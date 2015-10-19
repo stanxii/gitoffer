@@ -19,7 +19,24 @@ app.get('/', function (req, res, next) {
   console.log('hhhh');
   var url = 'http://www.indeed.com/l-Anchorage,-AK-jobs.html';
   crawlerIndeedOriginsDAO.crawlerOneSeed(url).then((data) => {
-    console.log('fuckkkkkkkkkkerrr crawlerOneSeed ok.... data=' + data);
+    console.log('fuck crawlerOneSeed ok.... data=' + data);
+
+    // data.pages.forEach((v) => {
+    //
+    //       var vlink = 'http://indeed.com'+v.link;
+    //        crawlerIndeedOriginsDAO.crawlerOnePage(vlink).then((data) => {
+    //          console.log('doing... one ok');
+    //        });
+    // });
+
+    var vlink = 'http://indeed.com'+data.pages[0].link;
+     crawlerIndeedOriginsDAO.crawlerOnePage(vlink).then((data) => {
+       console.log('doing... one ok');
+    });
+
+  })
+  .then( (data) => {
+    //console.log(data);
     res.send(data);
     res.send(JSON.stringify(data));
   })
