@@ -4,6 +4,7 @@
 //var JobUrl = require('../models/JobUrl');
 
 //var cheerio = require('cheerio');
+var async = require('async');
 
 var moment = require('moment');
 
@@ -11,6 +12,7 @@ var moment = require('moment');
 var IndeedsDAO = require('./indeedctrl');
 
 var superagentUrlDAO = require('./superagentUrl');
+var horsemanUrlDAO = require('./horsemanUrl');
 var cheerioParseDAO = require('./cheerioParse');
 
 //es6 promise fun and call demo version ok
@@ -33,6 +35,7 @@ var cheerioParseDAO = require('./cheerioParse');
 var crawlerIndeedJobsDAO = function() {};
 
 crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
+  var _this = this;
   return new Promise((resolve, reject) => {
     superagentUrlDAO.request(url).then((res) => {
         console.log('step 1 fetch top url seed successof');
@@ -45,13 +48,55 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
             data.jobs.map((v) => {
               IndeedsDAO.insertJobSeedOrigin(v);
             });
+
+            //one seed 100 pages 1000 jobtitls crawler
+
+            // data.pages.map((v) => {
+            //   var vlink = 'http://indeed.com'+v.link;
+            //   //console.log('++++++++++++++++++......rawler 2 page vlink' + vlink);
+            //   IndeedsDAO.insertTempUrl(vlink);
+            // });
+
+          async.eachSeries(data.pages,  function(item, callback){
+              console.log('fucking eachLimit====' +JSON.stringify(item));
+              var vlink = 'http://indeed.com'+item.link;
+              horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((data) => {
+                 console.log('doing... one ok');
+                 data.jobs.map((v) => {
+                    IndeedsDAO.insertJobSeedOrigin(v);
+                 });
+
+                 setTimeout(() => {
+                    callback();
+                 }, 800);
+                 
+               });
+
+          }, function(error){
+              if(error){
+                console.error("error: " + error);
+              }else{
+                console.log('all done success ful');
+              }
+
+          });
+
             resolve(data);
-      }).then((data) => {
-        console.log('crawlerOneSeed final date is' + moment());
-        //console.log('all done data=' + data);
-        resolve(data);
-      })
-      .catch((err) => {
+
+          //demo one link
+            // var vlink = 'http://indeed.com'+data.pages[0].link;
+            // console.log('now will crawler 2 page vlink' + vlink);
+            //  horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((data) => {
+            //    console.log('horsemanUrlDAO ok ok ok ok doing... one ok' + JSON.stringify(data));
+            //    console.log('doing... one json is ok' + data);
+            //    data.jobs.map((v) => {
+            //      IndeedsDAO.insertJobSeedOrigin(v);
+            //    });
+            // });
+
+
+
+    }).catch((err) => {
         console.log(err);
         reject({err: 1});
       });

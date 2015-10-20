@@ -211,7 +211,7 @@ cheerioParseDAO.prototype.getNextPagelinks = function(res) {
             if(reJob.test(href)){
               data.jobs.push({
                     title: $element.text(),
-                    link: href
+                    origin: href
                   });
               }
     });
@@ -229,7 +229,7 @@ cheerioParseDAO.prototype.getNextPagelinks = function(res) {
         var k=0;
 
 
-        for(i=0; i< 100; i++){
+        for(i=0; i< 99; i++){
           k += 10;
           seed = urlstart + k;
 

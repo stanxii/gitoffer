@@ -5,10 +5,12 @@ var iconv = require('iconv-lite');
 
 var crawlerIndeedOriginsDAO = require('./controllers/crawlerIndeedOrigins');
 
+//var indeedSercieDAO = require('./indeed.service');
 //mongodb
 mongoose.connect('mongodb://192.168.31.171/jobSearchEngine');
 mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 
+//indeedSercieDAO.startService();
 
 //建立express实例
 var app = express();
@@ -29,16 +31,20 @@ app.get('/', function (req, res, next) {
     //        });
     // });
 
-    var vlink = 'http://indeed.com'+data.pages[0].link;
-     crawlerIndeedOriginsDAO.crawlerOnePage(vlink).then((data) => {
-       console.log('doing... one ok');
-    });
-
-  })
-  .then( (data) => {
-    //console.log(data);
-    res.send(data);
+    //res.send(data);
+    // horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((data) => {
+    //   console.log('horsemanUrlDAO ok ok ok ok doing... one ok' + JSON.stringify(data));
+    //   console.log('doing... one json is ok' + data);
+    //   data.jobs.map((v) => {
+    //     IndeedsDAO.insertJobSeedOrigin(v);
+    //   });
     res.send(JSON.stringify(data));
+
+    // var vlink = 'http://indeed.com'+data.pages[0].link;
+    //  crawlerIndeedOriginsDAO.crawlerOnePage(vlink).then((data) => {
+    //    console.log('doing... one ok');
+    // });
+
   })
   .catch((err) => {
     console.log('fuckkkkkkkkkker error' + err);
