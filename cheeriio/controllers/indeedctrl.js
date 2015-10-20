@@ -1,6 +1,5 @@
 var Indeed = require('../models/Indeed');
 var JobSeed = require('../models/JobSeed');
-var TempUrl = require('../models/TempUrl');
 var moment = require('moment');
 
 var IndeedsDAO = function() {};
@@ -33,32 +32,15 @@ IndeedsDAO.prototype.insertJobSeedOrigin = function(job) {
     });
 }
 
-IndeedsDAO.prototype.insertTempUrl = function(url) {
 
-    var query = {url: url};
-    var doc = {url: url};
-    var options = {new: true, upsert: true};
-    TempUrl.findOneAndUpdate(query, doc, options, function(err, doc) {
-      if(err) {
-          console.log(err);
-          reject(err);
-      }else {
-            console.log('save insertTempUrl doc ok' + doc);
-            resolve(doc);
-      }
-    });
-}
-
-IndeedsDAO.prototype.getOneTempUrl = function() {
+IndeedsDAO.prototype.getAllIndeedUrls = function() {
   return new Promise((resolve, reject) => {
-    var query = {url: url};
-    TempUrl.findOne(query, function(err, doc) {
+    var query = {invalid: false};
+    Indeed.find(query, function(err, docs) {
       if(err) {
-          //console.log(err);
           reject({err: 1});
       }else {
-            console.log('save insertTempUrl doc ok' + doc);
-            resolve(doc);
+            resolve(docs);
       }
     });
   });

@@ -35,7 +35,6 @@ var cheerioParseDAO = require('./cheerioParse');
 var crawlerIndeedJobsDAO = function() {};
 
 crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
-  var _this = this;
   return new Promise((resolve, reject) => {
     superagentUrlDAO.request(url).then((res) => {
         console.log('step 1 fetch top url seed successof');
@@ -69,7 +68,7 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
                  setTimeout(() => {
                     callback();
                  }, 800);
-                 
+
                });
 
           }, function(error){
