@@ -4,7 +4,6 @@
 //var JobUrl = require('../models/JobUrl');
 
 //var cheerio = require('cheerio');
-var async = require('async');
 
 var moment = require('moment');
 
@@ -39,34 +38,45 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
     return superagentUrlDAO.request(url).then((data) => {
           console.log('step 2 la la la fuck get 100 pages url');
           //console.log('after data' + JSON.stringify(data));
-          var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v)});
+          var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v); });
           Promise.all(promises).then((docs) => {
             console.log('step 3 la la la all 10 jobs save ok then process pages.');
-
-            //now will save pages
-            async.eachSeries(data.pages,  function(item, callback){
-                console.log('fucking each Limit====Page====' +JSON.stringify(item));
-                var vlink = 'http://indeed.com'+item.link;
-                horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((data) => {
-                   //save 10 job items.
-                   var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v)});
-                   Promise.all(promises).then((docs) => {
-                     console.log('doing.finish ...... one page.. one ok');
-                     callback();});
-                 });
-
-            }, function(error){
-                if(error){
-                  console.log('one page err url')
-                  console.error("One page err error: " + error);
-                }else{
-                  console.log('all done success ful');
-
-                  resolve(data);
-                }
-
+            console.log('docs=' + docs);
+            //doning one page
+            var promises = data.jobs.pages( (page) => {
+              console.log('fucking each Limit====Page====' +JSON.stringify(item));
+              var vlink = 'http://indeed.com'+page.link;
+              horsemanUrlDAO.insertJobSeedOrigin(vlink);
             });
-          });
+            Promise.all(promises).then((docs) => {
+              console.log('XXXXXXXXXXX One-Seed, 100 pages, 1000 jobs success done...............');
+              resolve(docs);
+            });
+
+          //now will save pages
+          //   async.eachSeries(data.pages,  function(item, callback){
+          //       console.log('fucking each Limit====Page====' +JSON.stringify(item));
+          //       var vlink = 'http://indeed.com'+item.link;
+          //       horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((data) => {
+          //          //save 10 job items.
+          //          var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v)});
+          //          Promise.all(promises).then((docs) => {
+          //            console.log('horseman Doing.finish 10 job...... one page.. one ok');
+          //            callback();});
+          //        });
+          //
+          //   }, function(error){
+          //       if(error){
+          //         console.log('one page err url')
+          //         console.error("One page err error: " + error);
+          //       }else{
+          //         console.log('all done success ful');
+          //
+          //         resolve(data);
+          //       }
+          //
+          //   });
+          // });
 
       }).catch((err) => {
         console.log('crawlerOneSeed superagentUrlDAO.request(url) err ' + err);

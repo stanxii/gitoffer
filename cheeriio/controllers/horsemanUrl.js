@@ -1,6 +1,7 @@
 
 var Horseman = require('node-horseman');
 
+var IndeedsDAO = require('./indeedctrl');
 
 var horseman = new Horseman();
 
@@ -102,7 +103,7 @@ function scrapeNextPage(){
 }
 
 horsemanUrlDAO.prototype.reqIndeedJobOrigin = function(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
 
     console.log('now.... horseman will horse url' + url);
     horseman
@@ -127,7 +128,11 @@ horsemanUrlDAO.prototype.reqIndeedJobOrigin = function(url) {
     //.then(scrape);
     .then(function(data){
          //console.log(  'data: ' + JSON.stringify(data));
-         resolve(data);
+				  var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v)});
+				  Promise.all(promises).then((docs) => {
+					 	console.log('doing.finish ...... one page.. one ok');
+					 	resolve(data);
+			 		});
       });
    });
 }
