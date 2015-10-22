@@ -23,15 +23,17 @@ app.get('/', function (req, res, next) {
 
   IndeedsDAO.getAllIndeedUrls().then((jobs) => {
     async.eachSeries(jobs,  function(job, callback){
-        console.log('fucking each Seed in mongodb indeeds collection====' +JSON.stringify(job));
-        console.log('fucking joburl=' + job.url);
+        console.log('fucking One Seeding.......joburl=' + job.url);
 
         crawlerIndeedOriginsDAO.crawlerOneSeed(job.url).then((data) => {
-          console.log('fucking.... crawlerOneSeed 1000jobs ok .... data=' + data);
-          callback();
+          console.log('fucking.... XXXXXXX 1000jobs ok .... data=' + data);
+          IndeedsDAO.updateCralwedStatus(job._id).then((data) => {
+            callback();
+          });
         })
         .catch((err) => {
-          console.log('fuckkkkkkkkkker error' + err);
+          console.log('job.url=' + job.url);
+          console.log('fuckkkkkkkkkker error' + JSON.stringify(err));
           callback(err);
         });
 

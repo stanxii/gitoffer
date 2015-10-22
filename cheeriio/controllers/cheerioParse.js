@@ -241,10 +241,6 @@ cheerioParseDAO.prototype.getNextPagelinks = function(res) {
 
     });
 
-
-
-
-
     //console.log('before data' + JSON.stringify(data));
     resolve(data);
   });

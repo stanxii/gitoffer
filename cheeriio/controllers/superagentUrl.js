@@ -1,5 +1,8 @@
 
 var superagent = require('superagent');
+var horsemanUrlDAO = require('./horsemanUrl');
+var cheerioParseDAO = require('./cheerioParse');
+var IndeedsDAO = require('./indeedctrl');
 //var moment = require('moment');
 
 //ok promise post superagent version code
@@ -20,30 +23,77 @@ var superagentUrlDAO = function() {};
 
 superagentUrlDAO.prototype.request = function(url) {
   return new Promise((resolve, reject) => {
-    superagent.get(url)
-        .set('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36')
-        .end((err,res) => {
-            if(err) {
-              console.log(url);
-              console.log(res.statusCode);
-              console.log(res);
+      // var urlsort = url.substring(17, url.length -1);
+      // console.log(urlsort);
+      // var patt1 = new RegExp("^/jobs\\?q=");
+      // var result = patt1.test(urlsort);
+      // if(result){
+      //   console.log('horsemanUrlDAO...l1 jobs?===== lik call horsemanUrlDat req..')
+      //   horsemanUrlDAO.request(url).then((data) =>{
+      //     console.log('horseman ok');
+      //     resolve({err: 0, data: data});
+      //   }).catch((err) => {
+      //     console.log('horseman err');
+      //     reject({err: 1});
+      //   });
+      // }else{
 
+        superagent.get(url)
+            .set('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36')
+            .buffer(true)
+            .end((err,res) => {
+                if(err) {
+                  console.log('superagen error err=' + err );
+                  console.log('res = ' + res);
 
-              if(res.statusCode == 301){
+                  superagent.get(url)
+                      .set('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36')
+                      .buffer(true)
+                      .end((err,res) => {
+                          if(err) {
+                            console.log('superagen error err=' + err );
+                            console.log('res = ' + res);
+                            superagent.get(url)
+                                .set('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36')
+                                .buffer(true)
+                                .end((err,res) => {
+                                    if(err) {
+                                      console.log('superagen error err=' + err );
+                                      console.log('resxxxxxxxxx = ' + res);
+                                      reject({err: 1});
+                                    }else{
+                                        //console.log('resolve data=' + JSON.stringify(data));
+                                        console.log('resolve data');
+                                        resolve(data);
+                                    }
+                                  });
+                          }else{
+                              //console.log('resolve data=' + JSON.stringify(data));
+                            console.log('resolve data');
+                            resolve(data);
+                          }
+                        });
+                  //console.log('url=' + url);
+                  // horsemanUrlDAO.request(url).then((data) =>{
+                  //   resolve({err: 0, data: data});
+                  // }).catch((err) => {
+                  //   reject({err: 1});
+                  // });
 
-                redirectUrl = res.redirects[res.redirects.length -1];
-                console.log('response is 301 redirect to url' + redirectUrl);
-                console.log(redirectUrl);
-                this.request(redirectUrl)
-              }else{
-                console.log('reject err=' + err);
-                reject(err);
-              }
-            }else{
-              //console.log('resolve res=' + res);
-              resolve(res);
-            }
-     });
+                  reject({err: 1});
+                }else{
+                  //console.log('resolve res=' + res);
+                  cheerioParseDAO.getNextPagelinks(res).then((data) => {
+                    //console.log('resolve data=' + JSON.stringify(data));
+                    console.log('resolve data');
+                    data.jobs.map((v) => {
+                      IndeedsDAO.insertJobSeedOrigin(v);
+                    });
+                    resolve(data);
+                  });
+                }
+         });
+
    });
 }
 
