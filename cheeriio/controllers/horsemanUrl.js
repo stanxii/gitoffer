@@ -98,20 +98,26 @@ function scrapeNextPage(){
 		.then(function(data){
       return data;
 		})
-		.then( resolve );
+		.then(function(data){
+				console.log('horseman2 scrape page url=' + url);
+			  console.log('horseman2 scrape data: ' + JSON.stringify(data));
+      resolve(data);
+		});
 	});
 }
 
 horsemanUrlDAO.prototype.reqIndeedJobOrigin = function(url) {
   return new Promise((resolve) => {
-
     console.log('now.... horseman will horse url' + url);
-    horseman
+     horseman
     .userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0")
     .open(url)
     .waitForSelector("#resultsCol .row.result h2.jobtitle")
+    // .waitForSelector("#resultsCol")
+		// .then(function(){
+		// 	return scrape();
+		// });
 		.evaluate( function(){
-			// This code is executed in the browser.
 	    var data = {
 	      jobs: []
 	    };
@@ -127,14 +133,11 @@ horsemanUrlDAO.prototype.reqIndeedJobOrigin = function(url) {
 		})
     //.then(scrape);
     .then(function(data){
-         //console.log(  'data: ' + JSON.stringify(data));
-				  var promises = data.jobs.map( (v) => {IndeedsDAO.insertJobSeedOrigin(v)});
-				  Promise.all(promises).then((docs) => {
-					 	console.log('doing.finish ...... one page.. one ok');
-					 	resolve(data);
-			 		});
-      });
-   });
+			console.log('horseman2 scrape page url=' + url);
+      //console.log('horseman2 scrape data: ' + JSON.stringify(data));
+			resolve(data.jobs);
+		});
+  });
 }
 
 horsemanUrlDAO.prototype.request = function(url) {

@@ -20,11 +20,22 @@ IndeedsDAO.prototype.insertUniqIneed = function(seed) {
 }
 
 IndeedsDAO.prototype.insertJobSeedOrigin = function(job) {
-    var query = {origin: job.origin};
-    var doc = {title: job.title, origin: job.origin, crawlerDate: moment()};
-    var options = {new: true, upsert: true};
-    //return a exec() promise
-    return JobSeed.findOneAndUpdate(query, doc, options).exec();
+    return new Promise((resolve, reject) => {
+      var query = {origin: job.origin};
+      var doc = {title: job.title, origin: job.origin, crawlerDate: moment()};
+      var options = {new: true, upsert: true};
+      //return a exec() promise
+      //return JobSeed.findOneAndUpdate(query, doc, options);
+      JobSeed.findOneAndUpdate(query, doc, options, function(err, doc) {
+        if(err) {
+            console.log(err);
+            reject(err);
+        }else {
+              console.log('save doc ok' + doc);
+              resolve(doc);
+        }
+      });
+    });
 }
 
 

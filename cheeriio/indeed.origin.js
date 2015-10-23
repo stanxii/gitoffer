@@ -27,9 +27,10 @@ app.get('/', function (req, res, next) {
 
         crawlerIndeedOriginsDAO.crawlerOneSeed(job.url).then((data) => {
           console.log('fucking.... XXXXXXX 1000jobs ok .... data=' + data);
-          IndeedsDAO.updateCralwedStatus(job._id).then((data) => {
-            callback();
-          });
+          // IndeedsDAO.updateCralwedStatus(job._id).then((data) => {
+          //   callback();
+          // });
+          callback();
         })
         .catch((err) => {
           console.log('job.url=' + job.url);
