@@ -86,11 +86,14 @@ crawlerIndeedJobsDAO.prototype.crawlerOneSeed = function(url) {
                 horsemanUrlDAO.reqIndeedJobOrigin(vlink).then((jobs) => {
                    //save 10 job items.
                    var promises = jobs.map( (v) => {
-                     return IndeedsDAO.insertJobSeedOrigin(v)});
+                     return IndeedsDAO.insertJobSeedOrigin(v);
+                   });
                    Promise.all(promises).then((docs) => {
                      console.log('horseman Doing.finish 10 job...... one page.. one ok');
+                     callback();
                  });
-                 callback();});
+
+               });
 
             }, function(error){
                 if(error){
