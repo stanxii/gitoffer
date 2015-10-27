@@ -19,8 +19,10 @@
     "mongoose": "^4.2.2",
     "node-horseman": "^2.7.1",
     "redis": "^0.12.1",
+    "request": "^2.65.0",
     "rethinkdb": "^2.1.1",
     "superagent": "^1.2.0",
-    "url": "^0.10.3"
+    "url": "^0.10.3",
+    "winston": "^1.1.1"
   }
 }
