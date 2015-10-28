@@ -21,8 +21,8 @@ app.get('/', function (req, res, next) {
   //var url = 'http://www.indeed.com/l-Anchorage,-AK-jobs.html';
 
   var options = {
-    limit: 1000,
-    skip: 0
+    limit: 10000,
+    skip: 998
   }
   //get all origins counts nums. 166587
   IndeedsDAO.getOriginsCount().then((count) => {
