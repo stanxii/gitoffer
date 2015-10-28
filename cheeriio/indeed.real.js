@@ -7,7 +7,7 @@ var async = require('async');
 
 var IndeedsDAO = require('./controllers/indeedctrl');
 //mongodb
-mongoose.connect('mongodb://192.168.31.171/jobSearchEngine');
+mongoose.connect('mongodb://127.0.0.1/jobSearchEngine');
 mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 
 //indeedSercieDAO.startService();
