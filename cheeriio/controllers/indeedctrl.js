@@ -107,7 +107,7 @@ return new Promise((resolve, reject) => {
     }else{
 
       //request data promise.
-      console.log('done get one... 10 from mongodb limt data' + JSON.stringify(data));
+      //console.log('done get one... 10 from mongodb limt data' + JSON.stringify(data));
       //request and get real url and content for download save only.
       //serial
       async.eachSeries(data.items,  function(v, callback){
