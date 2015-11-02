@@ -15,14 +15,14 @@ mongoose.connection.on('error', console.error.bind(console, 'mongodb connection 
 //建立express实例
 var app = express();
 
-app.get('/', function (req, res, next) {
+//app.get('/', function (req, res, next) {
   // 用 superagent 去抓取 https://cnodejs.org/ 的内容
   console.log('Real....');
   //var url = 'http://www.indeed.com/l-Anchorage,-AK-jobs.html';
 
   var options = {
-    limit: 30000,
-    skip: 22541 
+    limit: 10000,
+    skip: 155001 
   }
   //get all origins counts nums. 166587
   IndeedsDAO.getOriginsCount().then((count) => {
@@ -31,10 +31,11 @@ app.get('/', function (req, res, next) {
 
   }).then((data) => {
     //all done
-    res.send(JSON.stringify(data));
+      console.log('done ok');
+ //   res.send(JSON.stringify(data));
   });
 
-});
+//});
 
 app.listen(3000, function (req, res) {
   console.log('app is running at port 3000');

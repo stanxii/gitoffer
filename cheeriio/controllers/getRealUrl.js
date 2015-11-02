@@ -50,7 +50,7 @@ getRealUrlDAO.prototype.request = function(url) {
           console.log('Requesting.... get data err=' + error);
           reject({status:301})
         }
-      }).setMaxListeners(20);
+      });
     });
 }
 
