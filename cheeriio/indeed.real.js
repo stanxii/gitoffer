@@ -22,8 +22,8 @@ var app = express();
 
   var options = {
     limit: 10000,
-    skip: 155001 
-  }
+    skip: 2000
+  };
   //get all origins counts nums. 166587
   IndeedsDAO.getOriginsCount().then((count) => {
 

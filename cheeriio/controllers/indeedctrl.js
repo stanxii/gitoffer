@@ -87,7 +87,8 @@ IndeedsDAO.prototype.getSkipLimitOrigins = function(count, skip, limit) {
 return new Promise((resolve, reject) => {
   _this = this;
   console.log('calling......getSkipLimitOrigins now...............');
-  JobSeed.find().skip(skip).limit(limit).exec().then((items) => {
+  //JobSeed.find().skip(skip).limit(limit).exec().then((items) => {
+  JobSeed.find({seed: {$exists : false}}).skip(skip).limit(limit).exec().then((items) => {
     skip += limit;
     console.log(skip);
     if(count - skip > 0){
