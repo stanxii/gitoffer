@@ -2,6 +2,9 @@ var Indeed = require('../models/Indeed');
 var JobSeed = require('../models/JobSeed');
 var moment = require('moment');
 
+
+var Promise = require('bluebird');
+
 var async = require('async');
 var winston = require('winston');
 var logger = new (winston.Logger)({
@@ -80,13 +83,36 @@ IndeedsDAO.prototype.getAllIndeedUrls = function() {
 }
 
 IndeedsDAO.prototype.getOriginsCount = function() {
-  return JobSeed.count().exec();
+	return JobSeed.count().exec();
+/*	
+  Promise.all([
+        JobSeed.find({seed: {$exists : true}}).exec(),
+		JobSeed.count().exec()
+	]).spread(function(items, count) {
+		console.log('ok now get count=' + count);
+		return count;
+	}, function(err) {
+		console.log('getOriginsCount error');
+		return -1;
+	});
+ */
+ 
 }
 
+
+
+IndeedsDAO.prototype.getSkipLimitReal = function(skip, limit) {
+	console.log('skip==' + parseInt(skip));
+	console.log('limit==' + parseInt(limit));
+
+	console.log('calling......getSkipLimitReal now...xx............');
+	return JobSeed.find({seed: {$exists : true}}).skip(skip).limit(limit).exec();
+}
+  
 IndeedsDAO.prototype.getSkipLimitOrigins = function(count, skip, limit) {
 return new Promise((resolve, reject) => {
   _this = this;
-  console.log('calling......getSkipLimitOrigins now...............');
+  console.log('calling......getSkipLimitOrigins now...xx............');
   //JobSeed.find().skip(skip).limit(limit).exec().then((items) => {
   JobSeed.find({seed: {$exists : false}}).skip(skip).limit(limit).exec().then((items) => {
     skip += limit;

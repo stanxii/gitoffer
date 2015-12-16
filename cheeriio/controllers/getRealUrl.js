@@ -26,10 +26,14 @@ var request = require('request');
 
 var getRealUrlDAO = function() {};
 
-getRealUrlDAO.prototype.request = function(url) {
+getRealUrlDAO.prototype.request = function(url, localAddress) {
   return new Promise((resolve, reject) => {
       //console.log('requesting... url=' + url);
-
+		var options = {
+			method: 'GET',
+			url: url,
+			localAddress: localAddress
+		};
       //var url='http://indeed.com/rc/clk?jk=bb35be99eb0a2461';
       request(url, function (error, response, body) {
         //console.log(response.statusCode);
@@ -48,7 +52,7 @@ getRealUrlDAO.prototype.request = function(url) {
         }else {
           //console.log(response.statusCode);
           console.log('Requesting.... get data err=' + error);
-          reject({status:301})
+          reject({status:301});
         }
       });
     });

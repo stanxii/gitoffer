@@ -7,7 +7,7 @@ var crawlerIndeedJobsDAO = require('./controllers/crawlerIndeedJobs');
  //https://github.com/ageitgey/node-unfluff
 var crawlerDAO = require('./controllers/crawler');
 
-//mongodb
+//mongodb xxxx
 mongoose.connect('mongodb://192.168.31.171/jobSearchEngine');
 mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 
