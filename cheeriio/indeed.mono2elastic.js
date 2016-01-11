@@ -27,6 +27,10 @@ function forImmediate(i, end) {
 				Promise.map(items, function(element) {
 					console.log('steping is end i='+i);
 					console.log('steping is end element ='+ element);
+					
+					
+					
+
 					return element+'.';
 					//return Promise.resolve(element+'.');
 				})
@@ -51,8 +55,17 @@ function stepOnceParseIntoElastic(i, count) {
 				// console.log('get limit oXXXXXXXXXXXXXXkk' + items);
 				
 				Promise.map(items, function(element) {
-					// console.log('steping is end element ='+ element);
-					return Promise.resolve(element);
+					console.log('steping is end element ='+ element.seed);
+					request(element.seed, function (error, response, body) {
+					  if (!error && response.statusCode == 200) {
+						 console.log(body); // Show the HTML for the Google homepage.
+						
+						var data = extractor(body, 'en');
+						console.log(data);
+					  }
+					  return Promise.resolve(element);
+					}); 
+					
 				})
 				.then(function(allItems) {
 					//console.log('allItems done' + allItems);
@@ -80,7 +93,8 @@ function stepOnceParseIntoElastic(i, count) {
 	  console.log('sum inner count= ' + count);
 	  stepOnceParseIntoElastic(0 , 5)
 		.then((data) => {
-			console.log('sum data= ' + data);
+			// console.log('sum data= ' + data);
+			console.log('Oh really, i did it. Yeah ooooo ');
 		}).catch((e) => {
 			console.log('finally there are somethins wrong. fuck');
 		});
