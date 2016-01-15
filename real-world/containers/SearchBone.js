@@ -17,7 +17,7 @@ import { resetErrorMessage } from '../actions'
 class SearchBone extends Component {
   constructor(props) {
     super(props)
-	this.renderResults = this.renderResults.bind(this)
+	//this.renderResults = this.renderResults.bind(this)
   }
   
   componentWillMount() {
@@ -45,24 +45,30 @@ class SearchBone extends Component {
         })
     }
 */
-	
+
+/*	
   renderResults() {
-        //if (this.props.jobs) {
+        if (this.props.jobs) {
             return (
 			    <div>
 				  <h2> Hello results </h2>
                 <SearchList data={this.props.jobs}/>
 				</div>
             )
-        //}
+        }
   }
+*/
 	
   render(){
         return (
             <div className="SearchBone">
                 <h2>Who is Richer?</h2>
                 <SearchBox  doSearch={this.props.loadJobs}/>
-                {this.renderResults}
+				<div>
+				  <h2> Hello results </h2>
+                <SearchList data={this.props.jobs}/>
+				</div>
+                //{this.renderResults}
             </div>
         )
   }
@@ -70,7 +76,7 @@ class SearchBone extends Component {
 }  
 
 SearchBone.propTypes = {
-  jobs: PropTypes.object.isRequired,
+  jobs: PropTypes.array.isRequired,
   //ifrom: PropTypes.string.isRequired,
   //isize: PropTypes.string.isRequired,
   loadJobs: PropTypes.func.isRequired
@@ -82,12 +88,13 @@ function mapStateToProps(state) {
   } = state
   
   return {
-    jobs: state.entities.jobs
+    jobs: state.jobs.jobs
   }
 }
 
 export default connect(mapStateToProps, {
   loadJobs,
+  pushState
 })(SearchBone)
 
 	

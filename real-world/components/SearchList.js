@@ -8,15 +8,18 @@ export default class SearchList extends Component {
     return (
       <ul>
         {data.map((job, index) =>
-          <SearchItem {...job}
+          <SearchItem job = {job}
                 key={index} />
-                //onClick={() => this.props.onJobClick(index)} />
+                
         )}
       </ul>
     )
   }
   
   /*
+  
+  //onClick={() => this.props.onJobClick(index)} />
+  
   renderResults() {
         if (jobs && jobs.length) {
 		  //making the rows to display	

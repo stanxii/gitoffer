@@ -33,13 +33,19 @@ function callApi(endpoint, schema) {
         return Promise.reject(json)
       }
 
-      const camelizedJson = camelizeKeys(json)
+      //const camelizedJson = camelizeKeys(json)
+      const camelizedJson = camelizeKeys(json.entities)
       const nextPageUrl = getNextPageUrl(response)
 
-      return Object.assign({},
-        normalize(camelizedJson, schema),
+      var res = Object.assign({},
+        //normalize(camelizedJson, schema),
+		//normalize(camelizedJson, arrayOf(jobSchema)),
+		//camelizedJson,
+		json,
         { nextPageUrl }
       )
+	  
+	  return res
     })
 }
 

@@ -35,7 +35,8 @@ class SearchHome extends Component {
   }
 
   handleGoClick() {
-	this.props.pushState(null, `/search/$this.getInputValue()/1/20`)  
+	var nextvalue = this.getInputValue();  
+	this.props.pushState(null, `/search/${nextvalue}/1/20`)  
     //this.props.goSearch(this.getInputValue())
   }
 	
@@ -63,12 +64,14 @@ class SearchHome extends Component {
 }  
 
 SearchHome.propTypes = {
+  pushState: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, {
+  pushState	
 })(SearchHome)
 
 

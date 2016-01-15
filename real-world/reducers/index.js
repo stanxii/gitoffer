@@ -14,9 +14,15 @@ function entities(state = { users: {}, repos: {} }, action) {
 }
 
 //updates jobs
-function jobs(state = { jobs: {}}, action) {
+function jobs(state = { jobs: []}, action) {
   if (action.response && action.response.entities) {
-    return merge({}, state, action.response.jobs)
+	  
+	   var res = Object.assign({},      
+		state,
+        {jobs: action.response.entities}
+      )
+	  
+	return res
   }
 
   return state
