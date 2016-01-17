@@ -9,8 +9,7 @@ export default class SearchList extends Component {
       <ul>
         {data.map((job, index) =>
           <SearchItem job = {job}
-                key={index} />
-                
+                key={index} />               
         )}
       </ul>
     )

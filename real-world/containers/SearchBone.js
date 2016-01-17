@@ -62,7 +62,7 @@ class SearchBone extends Component {
   render(){
         return (
             <div className="SearchBone">
-                <h2>Who is Richer?</h2>
+                <h2>Who is Summer?</h2>
                 <SearchBox  doSearch={this.props.loadJobs}/>
 				<div>
 				  <h2> Hello results </h2>
