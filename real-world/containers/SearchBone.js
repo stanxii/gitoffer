@@ -12,6 +12,7 @@ import SearchBox from '../components/SearchBox'
 import SearchList from '../components/SearchList'
 import { resetErrorMessage } from '../actions'
 
+//import {componentHandler} from 'material-design-lite';
 
 
 class SearchBone extends Component {
@@ -24,6 +25,13 @@ class SearchBone extends Component {
     //loadData(this.props)
   }
   
+  componentDidMount() {
+	componentHandler.upgradeDom();  
+  }
+   componentDidUpdate() {
+    componentHandler.upgradeDom();
+  }
+	
   componentWillReceiveProps(nextProps) {
    // if (nextProps.login !== this.props.login) {
    //   loadData(nextProps)

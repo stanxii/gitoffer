@@ -53,6 +53,9 @@ class SearchHome extends Component {
 				</button>
 				<p>
 				  This is the home page.
+					<button className="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+					  <i className="material-icons">add</i>
+					</button>
 				</p>
 				<p>
 				  Will nagivate to search page.
