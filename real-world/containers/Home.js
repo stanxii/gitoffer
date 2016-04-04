@@ -39,15 +39,18 @@ class Home extends Component {
   }
 
   render() {
-    const { children, inputValue } = this.props
+    const { inputValue } = this.props
     return (
       <div>
+	    <ul>
+          <li><Link to="/">Find Jobs</Link></li>
+          <li><Link to="/search/xxx/1/2">Search Page</Link></li>
+        </ul>
 	    Fuck you Home now show .....
         <Explore value={inputValue}
                  onChange={this.handleChange} />
         <hr />
         {this.renderErrorMessage()}
-        {children}
       </div>
     )
   }
@@ -60,7 +63,7 @@ Home.propTypes = {
   pushState: PropTypes.func.isRequired,
   inputValue: PropTypes.string.isRequired,
   // Injected by React Router
-  children: PropTypes.node
+ // children: PropTypes.node
 }
 
 function mapStateToProps(state) {

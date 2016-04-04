@@ -10,10 +10,6 @@ class App extends Component {
     const { children } = this.props
     return (
       <div>     
-		<ul>
-          <li><Link to="/">Find Jobs</Link></li>
-          <li><Link to="/search/xxx/1/2">Search Page</Link></li>
-        </ul>
         {children}
       </div>
     )

@@ -43,6 +43,10 @@ class SearchHome extends Component {
   render(){
         return (
             <div>
+			    <ul>
+				  <li><a href="/">Find Jobs</a></li>
+				  <li><a href="/search/xxx/1/2">Search Page</a></li>
+				</ul>
 				<p>Type a username or repo full name and hit 'Go':</p>
 				<input size="45"
 					   ref="input"

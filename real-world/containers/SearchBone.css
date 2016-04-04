@@ -1,0 +1,157 @@
+.SearchBone {
+	  html, body {
+	  height: 100%;
+	}
+
+	body {
+	  margin: 0;
+	  padding: 0;	
+	  font-family: 'Oswald', sans-serif;
+	  display: flex;
+	  flex-direction: column;
+	}
+
+	.headerbar {
+		
+	}
+
+	.navigation {
+	  list-style: none;
+	  margin: 0;
+	  //background: deepskyblue;
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-flow: row wrap;
+	  justify-content: flex-end;
+	}
+
+	.navigation a {
+	  text-decoration: none;
+	  display: block;
+	  padding: 1em;
+	}
+
+	.navigation a:hover {
+	  background: #00b7f5;
+	}
+
+	@media all and (max-width: 800px) {
+	  .navigation {
+		justify-content: space-around;
+	  }
+	}
+	@media all and (max-width: 600px) {
+	  .navigation {
+		-webkit-flex-flow: column wrap;
+		flex-flow: column wrap;
+		padding: 0;
+	  }
+
+	  .navigation a {
+		text-align: center;
+		padding: 10px;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	  }
+
+	  .navigation li:last-of-type a {
+		border-bottom: none;
+	  }
+	}
+
+	.searchbar {
+		display: flex;
+		border-top: 5px #00b7f5 solid;
+		background-color: #eee;
+	}
+
+	.searchbar > .left {
+		width: 10%;
+	}
+
+	.searchbar > .searchbox {
+		flex: 1;
+		font-size: 18px;
+		justify-content: space-around;
+		padding: 10px;
+		display: flex;
+	}
+
+	.searchbar > .right {
+		flex: 1;
+	}
+
+	.searchbox .flexsearch--input {
+		flex: 1;
+		margin: 2px;
+		height: 40px;
+		
+	}
+
+	.searchbox .flexsearch-btn {
+		background-color: #00b7f5;
+		margin: 2px;
+		height: 40px;
+		
+	}
+
+
+	.footerbar {
+		
+	}
+
+	.container {
+	  display: -moz-box;
+	  display: -webkit-flexbox;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: -moz-flex;
+	  display: flex;
+	  flex: 1;
+	  -webkit-flex-direction: row;
+	  -moz-flex-direction: row;
+	  -ms-flex-direction: row;
+	  flex-direction: row;
+	}
+
+	.flex-1 {
+	  width: 10%;
+	  //background-color: blue;
+	}
+
+	.flex-2 {
+	  position: relative;
+	  -moz-box-flex: 1;
+	  -webkit-flex: 1;
+	  -moz-flex: 1;
+	  -ms-flex: 1;
+	  flex: 1;
+	  //background-color: red;
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	}
+
+	.search-result {
+		//background-color: green;
+		width: 50%;
+	}
+
+	.result-headline {
+		border-bottom: 1px solid #d7d7d7;
+		margin: 15px 0 10px 0;
+	}
+
+	.right-ads {
+		//background-color: yellow;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+	}
+	
+}

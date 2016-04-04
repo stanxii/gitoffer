@@ -26,10 +26,10 @@ class SearchBone extends Component {
   }
   
   componentDidMount() {
-	componentHandler.upgradeDom();  
+	//componentHandler.upgradeDom();  
   }
    componentDidUpdate() {
-    componentHandler.upgradeDom();
+    //componentHandler.upgradeDom();
   }
 	
   componentWillReceiveProps(nextProps) {
@@ -68,9 +68,14 @@ class SearchBone extends Component {
 */
 	
   render(){
+	
         return (
-            <div className="SearchBone">
-                <h2>Who is Summer?</h2>
+            <div>
+			    <ul >
+				  <li><a href="/">Find Jobs</a></li>
+				  <li><a href="/search/xxx/1/2">Search Page</a></li>
+				</ul>
+                <h2>Search list page is Summer?</h2>
                 <SearchBox  doSearch={this.props.loadJobs}/>
 				<div>
 				  <h2> Hello results </h2>

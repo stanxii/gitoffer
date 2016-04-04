@@ -18,7 +18,8 @@ function getNextPageUrl(response) {
 }
 
 //const API_ROOT = 'https://api.github.com/'
-const API_ROOT = 'http://192.168.31.209:9000/'
+const API_ROOT = 'http://192.168.1.209:9000/'
+//const API_ROOT = 'http://192.168.31.209:9000/'
 
 // Fetches an API response and normalizes the result JSON according to schema.
 // This makes every API response have the same shape, regardless of how nested it was.
