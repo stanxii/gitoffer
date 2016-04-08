@@ -28,10 +28,12 @@ export default function promiseMiddleware( objMethods ) {
 	.then((result) => {
 		console.log('fuck promise middleware return' +result);
 		console.log('fuck type===success'+ SUCCESS);
-		return next({ ...rest, result, type: SUCCESS })
+		next({ ...rest, result, type: SUCCESS });
+		return true;
 	}).catch((error) => {
-		console.log('fuck error'+ error);
-		return next({ ...rest, error, type: ERROR })
+		console.log('fuck error');
+		next({ ...rest, error, type: ERROR });
+		return false;
     });
   };
 }

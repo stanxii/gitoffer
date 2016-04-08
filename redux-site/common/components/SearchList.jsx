@@ -1,17 +1,46 @@
 import React, {Component, PropTypes} from 'react';
 import SearchItem from './SearchItem';
 
+import { List, ListItem, ListItemContent, ListItemAction, Icon } from 'react-mdl';
+
+
+if (process.env.BROWSER) {
+    require('./SearchList.less');
+}
 
 export default class SearchList extends Component {
   render() {
 	const {data} = this.props;  
     return (
-      <ul>
+	<div>
+		<List style={{width: '650px'}}>
+			  <ListItem  className='SearchList__content' threeLine>
+				<ListItemContent avatar="person" subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>
+				<ListItemAction>
+				  <a href="#"><Icon name="star" /></a>
+				</ListItemAction>
+			  </ListItem>
+			  <ListItem threeLine>
+				<ListItemContent avatar="person" subtitle="Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.">Aaron Paul</ListItemContent>
+				<ListItemAction>
+				  <a href="#"><Icon name="star" /></a>
+				</ListItemAction>
+			  </ListItem>
+			  <ListItem threeLine>
+				<ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+				<ListItemAction>
+				  <a href="#"><Icon name="star" /></a>
+				</ListItemAction>
+			  </ListItem>
+			</List>
+			
+	  <ul>
         {data.map((job, index) =>
           <SearchItem job = {job}
                 key={index} />               
         )}
       </ul>
+	 </div>
     )
   }
   
@@ -29,6 +58,8 @@ export default class SearchList extends Component {
 	      });
           //returning the table		  
           return (
+			 
+
 			  {rows}
           )
         }
@@ -38,9 +69,15 @@ export default class SearchList extends Component {
     const {data} = this.props;
 	
 	return(
-		<ul>
-		  { this.renderResults() }
-		</ul>	
+	    <div>
+		 
+			
+			
+
+		  <ul>
+		    { this.renderResults() }
+		  </ul>
+        </div>		
 	)
   }
   */

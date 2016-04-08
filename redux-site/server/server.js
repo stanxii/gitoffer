@@ -113,7 +113,13 @@ function renderFullPage(html, initialState) {
 	  <head>
 		<title>Universal Redux Example</title>
 		<link rel="shortcut icon" type="image/png" href="assets/images/react.png">
-		<link rel="stylesheet" href="/assets/css/uikit.almost-flat.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" />
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css">
+		<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+		<link rel="stylesheet" 
+		href="/assets/css/main.css">
 	  </head>
 	  <body>
 	  <div class="container">${html}</div>

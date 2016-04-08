@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 
+import { List, ListItem, ListItemContent, ListItemAction, Icon } from 'react-mdl';
+import Button  from 'react-mdl/lib/Button';
 
 ////////////////////
 export default class SearchBox extends Component {
@@ -35,9 +37,13 @@ export default class SearchBox extends Component {
                ref="queryString"
                defaultValue=''
                onKeyUp={this.handleKeyUp} />
-        <button onClick={this.handleGoClick}>
-          Go!
-        </button>
+		
+			
+			
+		<Button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' onClick={this.handleGoClick} >
+		    Search Jobs
+		</Button>
+			
         
       </div>
     )

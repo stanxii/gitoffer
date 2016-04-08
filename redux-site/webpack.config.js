@@ -2,6 +2,8 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 module.exports = {
 
@@ -23,7 +25,14 @@ module.exports = {
   plugins: [
 	new webpack.optimize.OccurenceOrderPlugin(),
 	new webpack.HotModuleReplacementPlugin(),
-	new webpack.NoErrorsPlugin()
+	new webpack.NoErrorsPlugin(),
+	new webpack.DefinePlugin({
+            "process.env": {
+                BROWSER: JSON.stringify(true),
+                NODE_ENV: JSON.stringify( process.env.NODE_ENV || 'development' )
+            }
+        }),
+        new ExtractTextPlugin("[name].css")
   ],
 
   //
@@ -37,6 +46,21 @@ module.exports = {
   // jx: 記得設定 babel 的 stage=0 才支援最新 es7 語法
   module: {
 	loaders: [
+	    {
+			test: /\.css$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
+		},
+		{
+			test: /\.less$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
+		},
+
+		{ test: /\.gif$/, loader: "url-loader?limit=10000&mimetype=image/gif" },
+		{ test: /\.jpg$/, loader: "url-loader?limit=10000&mimetype=image/jpg" },
+		{ test: /\.png$/, loader: "url-loader?limit=10000&mimetype=image/png" },
+		{ test: /\.svg/, loader: "url-loader?limit=26000&mimetype=image/svg+xml" },
+		{ test: /\.(woff|woff2|ttf|eot)/, loader: "url-loader?limit=1" },
+
 		{
 		  test: /\.jsx?$/,
 		  loader: 'babel',
@@ -46,21 +70,13 @@ module.exports = {
 		    presets: [ 'react-hmre', "es2015", "stage-0", "react" ],
 		    plugins: [ "transform-decorators-legacy" ],
 		  }
-		  /*query: {
-		    "presets": [ "es2015", "stage-0", "react"],
-		    "plugins": [ "transform-decorators-legacy", 'react-transform'],
-			// 這裏就是直接貼上原本寫在 .babelrc 內的設定字串
-		    "env": {
-		  	  "development": {
-		  		"presets": ["react-hmre"]
-		  	  }
-		  	}
-		  }*/
 		},
-		{
-		  test: /\.css$/,
-		  loader: "style!css",
-		},
+		
+		//{ test: /\.json$/, loader: "json-loader" },
+
+		//{ test: /\.txt$/, loader: "raw-loader" }
+
+	   
 	]
   }
 };

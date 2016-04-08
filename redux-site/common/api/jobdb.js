@@ -26,6 +26,7 @@ export default {
 			const init = {
 				mode: 'no-cors',
 				method: 'get',
+				timeout: 3000,
 				headers: {
 					'Accept': 'application/json',
 					'Content-Type': 'application/json',
